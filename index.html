@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css">
   <link rel="stylesheet" href="./styles.css">
 </head>
-<body>
+<body class="v2-site">
 <a class="skip-link" href="#content">本文へ移動</a>
 
 <header class="site-header">
@@ -32,12 +32,21 @@
 </header>
 
 <main id="content" class="content-shell">
-  <section class="tab-panel overview-panel" data-panel="overview" aria-labelledby="tab-overview">
-    <div class="hero">
+  <section class="tab-panel overview-panel overview-v2" data-panel="overview" aria-labelledby="tab-overview">
+    <div class="story-backdrop" aria-hidden="true">
+      <div class="story-bg is-active" data-story-image="clock"></div>
+      <div class="story-bg" data-story-image="compass"></div>
+      <div class="story-bg" data-story-image="door"></div>
+      <div class="story-backdrop-shade"></div>
+      <div class="story-grain"></div>
+      <div class="story-rail"><span></span><small>TIME / MEASURE / ACTION</small></div>
+    </div>
+
+    <div class="hero story-scene story-scene-clock is-visible" data-story-bg="clock">
       <div class="hero-copy">
         <p class="eyebrow"><span>PRIVATE TRIAL</span> 若干名</p>
         <h1>将来のために、<br>占術のモノサシも使い、<br><em>時間資本の配分を再定義する。</em></h1>
-        <p class="hero-lead">達成したい目標も、まだ言葉にならない望みも。向き合うべき問いを組み直し、三術という三つの物差しで捉え直して、次の行動を自分の言葉で決めます。</p>
+        <p class="hero-lead"><strong>達成したい目標も、まだ言葉にならない望みも。</strong><span class="desktop-line-break" aria-hidden="true"></span>向き合うべき問いを組み直し、三術という三つの物差しで捉え直して、次の行動を自分の言葉で決めます。</p>
         <p class="hero-note"><strong>あなたの背中を押します。</strong>ただし「占術がそう言うから」ではなく、「何のために、何に時間を使うと決めたか」を軸に。</p>
         <div class="hero-actions">
           <button class="primary-button" type="button" data-apply>トライアルに申し込む <i class="ph ph-arrow-right" aria-hidden="true"></i></button>
@@ -66,59 +75,71 @@
         <div class="offer-price"><span>初回トライアル</span><strong>29,800<em>円＋税</em></strong><small>税込32,780円／Time Capital Allocation</small></div>
         <button class="primary-button full" type="button" data-apply>申込希望を送る</button>
       </aside>
+      <div class="story-scroll-cue" aria-hidden="true"><span></span><small>SCROLL TO REFRAME</small></div>
     </div>
 
-    <section class="editorial-intro" aria-labelledby="what-title">
+    <section class="story-transition story-scene" data-story-bg="dark" aria-label="時間資本から問いへ">
+      <div class="story-ghost" aria-hidden="true"><span>TIME</span><span>CAPITAL</span><span>ALLOCATION</span></div>
+      <div class="transition-message"><small>FROM TIME TO INTENT</small><p>時間は、増やせない。<br>だから、使い方を変える。</p></div>
+    </section>
+
+    <section class="editorial-intro story-scene story-scene-compass" data-story-bg="compass" aria-labelledby="what-title">
       <div class="section-index"><span>01</span><small>WHAT YOU DO</small></div>
       <div class="editorial-heading">
         <p>まず、何をするサービスなのか。</p>
         <h2 id="what-title">向き合うべき問いを再構築し、<br>三つの異なる角度で光を当てて、<br>行動を変える。</h2>
       </div>
       <div class="editorial-copy">
-        <p>キャリアの重要な局面では、選択肢が足りないから迷うとは限りません。現職での昇格、転職、新規事業、学び直し。どれも合理的で意味があるほど、「いま限られた時間を何に置くか」は決めにくくなります。</p>
-        <p>Time Capital Allocationは、その迷いを単純な二択にしません。実現したい未来から逆算して問いを組み直し、三術から本人の語りとは独立した仮説を得て、仕事の条件や機会費用と照らし合わせます。最後に、何へ時間を投じ、何をいったん置かないかを本人が宣言します。</p>
-        <p>扱うのは仕事だけではありません。趣味に時間を戻したい。育児と仕事の配分を決め直したい。結婚生活のなかで、自分の時間をどこへ置くか考えたい。休みたい。有限な時間を何へ投じるかという問いであれば、テーマは問いません。そして、前へ進みたいときだけでなく、動けない時期、言葉にならない時期のご相談も受けています。</p>
+        <p><strong>選択肢が足りないから迷うとは限りません。</strong>現職での昇格、転職、新規事業、学び直し。どれも合理的で意味があるほど、「いま限られた時間を何に置くか」は決めにくくなります。</p>
+        <p><strong>その迷いを、単純な二択にはしません。</strong>実現したい未来から逆算して問いを組み直し、三術から本人の語りとは独立した仮説を得て、仕事の条件や機会費用と照らし合わせます。最後に、何へ時間を投じ、何をいったん置かないかを本人が宣言します。</p>
+        <p><strong>扱うのは仕事だけではありません。</strong>趣味に時間を戻したい。育児と仕事の配分を決め直したい。結婚生活のなかで、自分の時間をどこへ置くか考えたい。休みたい。有限な時間を何へ投じるかという問いであれば、テーマは問いません。そして、前へ進みたいときだけでなく、動けない時期、言葉にならない時期のご相談も受けています。</p>
       </div>
     </section>
 
-    <section class="journey" aria-label="サービスの基本構造">
+    <section class="journey story-scene story-scene-compass" data-story-bg="compass" aria-label="サービスの基本構造">
       <article>
         <div class="journey-icon"><i class="ph ph-crosshair" aria-hidden="true"></i></div>
-        <div><small>01 / REFRAME</small><h3>いま、何を知り、何を変えたいか。</h3><p>表面の質問をそのまま扱わず、達成したい状態、現実の制約、選択肢ごとの機会費用まで掘り下げます。「転職すべきか」ではなく、「次の1000日で育てたい資本は何か。そのために今後100日の時間をどう振り分けるか」のように、行動へつながる問いへ整えます。</p></div>
+        <div><small>01 / REFRAME</small><h3>いま、何を知り、何を変えたいか。</h3><p><strong>表面の質問を、そのまま扱いません。</strong>達成したい状態、現実の制約、選択肢ごとの機会費用まで掘り下げます。「転職すべきか」ではなく、「次の1000日で育てたい資本は何か。そのために今後100日の時間をどう振り分けるか」のように、行動へつながる問いへ整えます。</p></div>
       </article>
       <article>
         <div class="journey-icon"><i class="ph ph-compass-rose" aria-hidden="true"></i></div>
-        <div><small>02 / INTERPRET</small><h3>三術から、客観的な解釈を得る。</h3><p>算命学・インド占星術・西洋占星術をそれぞれ独立して計算・解釈します。三つを混ぜて都合のよい物語にせず、役割と環境、長期サイクル、動機と関係性という異なる角度から、本人の自己認識だけでは出にくい仮説を示します。</p><button type="button" class="inline-link" data-tab-target="astrology">三術が何を見るかを読む <i class="ph ph-arrow-right"></i></button></div>
+        <div><small>02 / INTERPRET</small><h3>三術から、客観的な解釈を得る。</h3><p><strong>三つを混ぜて、都合のよい物語にはしません。</strong>算命学・インド占星術・西洋占星術をそれぞれ独立して計算・解釈し、役割と環境、長期サイクル、動機と関係性という異なる角度から、本人の自己認識だけでは出にくい仮説を示します。</p><button type="button" class="inline-link" data-tab-target="astrology">三術が何を見るかを読む <i class="ph ph-arrow-right"></i></button></div>
       </article>
       <article>
         <div class="journey-icon"><i class="ph ph-calendar-check" aria-hidden="true"></i></div>
-        <div><small>03 / COMMIT</small><h3>時間配分を決め、第三者へ宣言する。</h3><p>レポートを受け取って終わりにはしません。解釈を踏まえ、どの仮説を採り、次の30日・100日・1000日で何へ時間を投じるかを本人が考えます。鑑定士への宣言として文章にし、最初の行動、見直す日、やらないことまでFixします。</p><button type="button" class="inline-link" data-tab-target="process">全工程を確認する <i class="ph ph-arrow-right"></i></button></div>
+        <div><small>03 / COMMIT</small><h3>時間配分を決め、第三者へ宣言する。</h3><p><strong>レポートを受け取って、終わりにはしません。</strong>解釈を踏まえ、どの仮説を採り、次の30日・100日・1000日で何へ時間を投じるかを本人が考えます。鑑定士への宣言として文章にし、最初の行動、見直す日、やらないことまでFixします。</p><button type="button" class="inline-link" data-tab-target="process">全工程を確認する <i class="ph ph-arrow-right"></i></button></div>
       </article>
+      <div class="story-scroll-cue story-section-cue" aria-hidden="true"><span></span><small>SCROLL TO REFRAME</small></div>
     </section>
 
-    <section class="service-deep-dive" aria-labelledby="service-title">
+    <section class="story-transition story-scene" data-story-bg="dark" aria-label="解釈から意思決定へ">
+      <div class="story-ghost story-ghost-measures" aria-hidden="true"><span>THREE</span><span>MEASURES</span><span>ONE DECISION</span></div>
+      <div class="transition-message"><small>NOT AN ANSWER. A MEASURE.</small><p>三つの読みを、<br>ひとつの正解にはしない。</p></div>
+    </section>
+
+    <section class="service-deep-dive story-scene story-scene-dark" data-story-bg="dark" aria-labelledby="service-title">
       <div class="deep-copy">
         <p class="label">TIME CAPITAL ALLOCATION</p>
         <h2 id="service-title">約3万円で買うのは、<br>「占いの結果」ではありません。</h2>
-        <p>買うのは、自分の限られた時間を、次にどこへ配分するかを決めるための一連の思考プロセスです。問いを曖昧なまま鑑定へ渡さず、三術の読みも断定として受け取らず、現実の選択肢と行動へ接続します。</p>
-        <p>完成物は、一般論を並べた性格診断ではなく、今回の論点だけに答えるTime Allocation Summaryです。冒頭には、三術から見た「Who You Are」を1ページで整理します。今回の問いに関係する資質、内的動機、力が活きる環境、陥りやすい過剰反応を俯瞰し、その後の解釈を読む前提にします。</p>
-        <p>そのうえで、問いの定義、各三術の独立解釈、共通点と視差、仕事上の含意、時間配分案、本人のAction Commitmentを一本につなぎます。Who You Areも固定的な人物評価ではなく、今回の論点に必要な範囲で編集します。</p>
+        <p><strong>買うのは、次にどこへ時間を配分するかを決めるための思考プロセスです。</strong>問いを曖昧なまま鑑定へ渡さず、三術の読みも断定として受け取らず、現実の選択肢と行動へ接続します。</p>
+        <p><strong>完成物は、今回の論点だけに答えるTime Allocation Summaryです。</strong>冒頭には、三術から見た「Who You Are」を1ページで整理します。今回の問いに関係する資質、内的動機、力が活きる環境、陥りやすい過剰反応を俯瞰し、その後の解釈を読む前提にします。</p>
+        <p><strong>解釈から行動宣言までを、一本につなぎます。</strong>問いの定義、各三術の独立解釈、共通点と視差、仕事上の含意、時間配分案、本人のAction Commitmentを整理します。Who You Areも固定的な人物評価ではなく、今回の論点に必要な範囲で編集します。</p>
       </div>
       <div class="deliverable-list">
         <div><span>01</span><i class="ph ph-chats-circle" aria-hidden="true"></i><p><strong>3回のチャットラリー</strong><small>目標、現在地、選択肢、制約を整理。鑑定前に、今回の問いと答えない範囲を合意します。</small></p></div>
         <div><span>02</span><i class="ph ph-function" aria-hidden="true"></i><p><strong>計算エンジンと三つの読み</strong><small>同じ出生情報を三つの体系で独立計算。違いを消さず、今回の論点への示唆を整理します。</small></p></div>
-        <div><span>03</span><i class="ph ph-identification-card" aria-hidden="true"></i><p><strong>Who You Are / 1 page</strong><small>今回の問いに関係する資質、動機、価値の出し方、環境条件、過剰反応をペライチで俯瞰します。詳細項目はトライアルで定義します。</small></p></div>
+        <div><span>03</span><i class="ph ph-identification-card" aria-hidden="true"></i><p><strong>Who You Are</strong><small>今回の問いに関係する資質、動機、価値の出し方、環境条件、過剰反応をペライチで俯瞰します。詳細項目はトライアルで定義します。</small></p></div>
         <div><span>04</span><i class="ph ph-file-text" aria-hidden="true"></i><p><strong>Time Allocation Summary</strong><small>固定テンプレートへ押し込まず、問いに必要な構成・時間軸・深さでテーラーメイドします。</small></p></div>
         <div><span>05</span><i class="ph ph-pencil-line" aria-hidden="true"></i><p><strong>リバイス1回</strong><small>事実誤認、根拠、解釈の飛躍、適用範囲のずれを修正。納得ではなく理解の精度を上げます。</small></p></div>
         <div><span>06</span><i class="ph ph-seal-check" aria-hidden="true"></i><p><strong>Action Commitment</strong><small>本人が選んだ時間配分、最初の行動、見直し日、やらないことを鑑定士へ宣言して完了します。</small></p></div>
       </div>
     </section>
 
-    <section class="case-teaser" aria-labelledby="case-teaser-title">
+    <section class="case-teaser story-scene story-scene-dark" data-story-bg="dark" aria-labelledby="case-teaser-title">
       <div class="case-teaser-copy">
         <p>CASE / ILLUSTRATIVE</p>
         <h2 id="case-teaser-title">昇格、転職、新規事業、MBA。<br>すべてを追って、どれも前へ進まない。</h2>
-        <p>32歳の戦略コンサルタントを想定した架空ケースで、Beforeの迷いが、問いの再構築、三術解釈、4週間の実行を通じてどう変わるのかを具体的に示します。</p>
+        <p><strong>Beforeの迷いが、問い・解釈・行動を通じてどう変わるのか。</strong>32歳の戦略コンサルタントを想定した架空ケースで、具体的に示します。</p>
         <button type="button" class="secondary-button" data-tab-target="case">Caseを読む <i class="ph ph-arrow-right"></i></button>
       </div>
       <div class="case-facts" aria-label="Before / TCA / After の要約">
@@ -130,35 +151,41 @@
       </div>
     </section>
 
-    <section class="difference-section" aria-labelledby="difference-title">
+    <section class="difference-section story-scene story-scene-dark" data-story-bg="dark" aria-labelledby="difference-title">
       <div class="section-heading"><p>WHY DIFFERENT</p><h2 id="difference-title">占いにも、コーチングにも、<br>そのままは分類できない。</h2><span>違いは、高級な言葉遣いではなく、工程と完成物にあります。</span></div>
       <div class="difference-list">
-        <article><span>01</span><i class="ph ph-compass-rose" aria-hidden="true"></i><div><h3>三術を、時間配分を捉え直す物差しにする。</h3><p>当てるための多数決ではなく、本人の既存認識へ異なる仮説を加えるために使います。由来の違う三つの読みを混ぜず、出所と適用範囲を分けて提示します。</p></div></article>
-        <article><span>02</span><i class="ph ph-briefcase" aria-hidden="true"></i><div><h3>仕事の現実を、翻訳せずに話せる。</h3><p>戦略コンサル・投資ファンドでの実務経験を持つ鑑定士が、昇格、役割変更、組織力学、キャリア資本、機会費用を理解したうえで、三術の読みを行動可能な言葉へ翻訳します。</p></div></article>
-        <article><span>03</span><i class="ph ph-user-focus" aria-hidden="true"></i><div><h3>背中は押す。押す根拠が違うだけ。</h3><p>「何を根拠にそう言えるか」まで書きます。だから、採るか採らないかを自分で選べます。そして、あなたが決めた配分は、鑑定士への宣言としてFixします。決めるのはあなたですが、決め切るまでは一緒に進みます。</p></div></article>
+        <article><span>01</span><i class="ph ph-compass-rose" aria-hidden="true"></i><div><h3>三術を、時間配分を捉え直す物差しにする。</h3><p><strong>当てるための多数決にはしません。</strong>本人の既存認識へ異なる仮説を加えるために使い、由来の違う三つの読みを混ぜず、出所と適用範囲を分けて提示します。</p></div></article>
+        <article><span>02</span><i class="ph ph-briefcase" aria-hidden="true"></i><div><h3>仕事の現実を、翻訳せずに話せる。</h3><p><strong>仕事の解像度を落とさず、占術の読みを話せます。</strong>戦略コンサル・投資ファンドでの実務経験を持つ鑑定士が、昇格、役割変更、組織力学、キャリア資本、機会費用を理解したうえで、行動可能な言葉へ翻訳します。</p></div></article>
+        <article><span>03</span><i class="ph ph-user-focus" aria-hidden="true"></i><div><h3>背中は押す。押す根拠が違うだけ。</h3><p><strong>「何を根拠にそう言えるか」まで書きます。</strong>だから、採るか採らないかを自分で選べます。そして、あなたが決めた配分は、鑑定士への宣言としてFixします。決めるのはあなたですが、決め切るまでは一緒に進みます。</p></div></article>
       </div>
+      <div class="story-scroll-cue story-section-cue" aria-hidden="true"><span></span><small>SCROLL TO COMMIT</small></div>
     </section>
 
-    <section class="option-editorial" aria-labelledby="option-title">
+    <section class="story-transition story-scene" data-story-bg="dark" aria-label="宣言から行動へ">
+      <div class="story-ghost story-ghost-action" aria-hidden="true"><span>DECIDE</span><span>DECLARE</span><span>MOVE</span></div>
+      <div class="transition-message"><small>AFTER THE REPORT</small><p>理解を、<br>次の4週間へ。</p></div>
+    </section>
+
+    <section class="option-editorial story-scene story-scene-door" data-story-bg="door" aria-labelledby="option-title">
       <div class="option-kicker"><i class="ph ph-trend-up" aria-hidden="true"></i><span>OPTION / AFTER THE REPORT</span></div>
       <div class="option-main">
         <div>
           <h2 id="option-title">この4週間の挑戦で、<br>この先の自分を大きく変えていく。</h2>
-          <p>レポートで納得しても、翌週に同じ会議、同じ締切、同じ生活へ戻れば、時間配分は変わりません。短期集中伴走は、初回で宣言した一つのテーマを、現実のカレンダーと行動へ移すためのオプションです。</p>
+          <p><strong>理解しただけでは、時間配分は変わりません。</strong>短期集中伴走は、初回で宣言した一つのテーマを、現実のカレンダーと行動へ移すためのオプションです。</p>
           <p><strong>毎週60分の面談枠</strong>を4週間ぶんお渡しします。その週の60分は、60分×1回でも、30分×2回でも、15分×4回でも、使い方は自由です。固定カリキュラムはありません。本人のAction Commitmentから、4週間で確かめる仮説、確保する時間枠、最初の一歩、途中で見る証拠、縮小・停止条件を一緒に設計し、毎週の現実を材料に配分を更新して、自力で回せる状態で終了します。</p>
+          <aside class="option-price"><span>初回29,800円＋税に追加</span><strong>39,800<em>円＋税</em></strong><small>税込43,780円／毎週60分の面談枠×4週</small></aside>
         </div>
-        <aside class="option-price"><span>初回29,800円＋税に追加</span><strong>39,800<em>円＋税</em></strong><small>税込43,780円／毎週60分の面談枠×4週</small></aside>
       </div>
       <div class="option-values">
-        <article><i class="ph ph-calendar-dots" aria-hidden="true"></i><h3>宣言を予定へ変える</h3><p>抽象的な決意を、誰と、いつ、何分、何をするかまで落とします。先にカレンダーへ置き、守れなかった理由も証拠として扱います。</p></article>
-        <article><i class="ph ph-arrows-clockwise" aria-hidden="true"></i><h3>毎週、配分を再判断する</h3><p>実行率だけで評価しません。現実の反応を見て、継続・拡大・縮小・停止を選び、次週の配分を更新します。</p></article>
-        <article><i class="ph ph-video-camera" aria-hidden="true"></i><h3>毎週60分、話せる枠がある</h3><p>4週間、毎週60分の面談枠をお渡しします。分割は自由。加えて、新しい問い1件（自由記述300文字以内）に文章で答える鑑定チケットを1回含みます。</p></article>
+        <article><i class="ph ph-calendar-dots" aria-hidden="true"></i><h3>宣言を予定へ変える</h3><p><strong>抽象的な決意を、現実の予定へ落とします。</strong>誰と、いつ、何分、何をするかまで決め、守れなかった理由も証拠として扱います。</p></article>
+        <article><i class="ph ph-arrows-clockwise" aria-hidden="true"></i><h3>毎週、配分を再判断する</h3><p><strong>実行率だけで評価しません。</strong>現実の反応を見て、継続・拡大・縮小・停止を選び、次週の配分を更新します。</p></article>
+        <article><i class="ph ph-video-camera" aria-hidden="true"></i><h3>毎週60分、話せる枠がある</h3><p><strong>4週間、毎週60分の面談枠をお渡しします。</strong>分割は自由。加えて、新しい問い1件（自由記述300文字以内）に文章で答える鑑定チケットを1回含みます。</p></article>
       </div>
-      <div class="option-actions"><button type="button" class="secondary-button light" data-tab-target="support">4週間の内容を見る <i class="ph ph-arrow-right"></i></button><span>自力で進められる方には、オプションを勧めません。</span></div>    </section>
+      <div class="option-actions"><button type="button" class="secondary-button light" data-tab-target="support">4週間の詳細を見る <i class="ph ph-arrow-right"></i></button><span>自力で進められる方には、オプションを勧めません。</span></div>    </section>
   </section>
 
   <section class="tab-panel process-panel" data-panel="process" hidden aria-labelledby="tab-process">
-    <div class="page-hero"><p>HOW IT WORKS</p><h1>問いを整え、読み解き、<br>自分の時間配分を宣言する。</h1><span>初回29,800円＋税に含まれる全工程を、申込から完了まで順に示します。何を渡し、何を受け取り、どこで自分が考えるのかが分かります。</span></div>
+    <div class="page-hero visual-hero visual-clock"><p>HOW IT WORKS</p><h1>問いを整え、読み解き、<br>自分の時間配分を宣言する。</h1><span>初回29,800円＋税に含まれる全工程を、申込から完了まで順に示します。何を渡し、何を受け取り、どこで自分が考えるのかが分かります。</span></div>
     <div class="scope-label"><span>TIME CAPITAL ALLOCATION</span><strong>初回 29,800円＋税</strong><small>税込32,780円／問いの再構築からAction Commitmentまで</small></div>
     <ol class="detailed-process">
       <li><span class="step-no">01</span><div class="step-icon"><i class="ph ph-paper-plane-tilt"></i></div><div class="step-copy"><small>APPLICATION</small><h2>目標・望みと現在地を送る</h2><p>申込フォームでは、達成したい目標・実現したい望みと、現在の状況をそれぞれ200〜500文字で記入します。完成された相談文である必要はありません。「選択肢はあるが決めきれない」「進みたいのに時間を置けない」といった状態でも構いません。</p><p>勤務先名、顧客名、案件名など、第三者を特定する非公開情報は不要です。役割、選択肢、制約を抽象化して書くことで、今回のテーマがサービスに合うかを確認します。</p><div class="step-output"><strong>この段階で確認すること</strong><span>テーマとの適合／受付枠／必要な出生情報／本サービスで扱わない範囲</span></div></div></li>
@@ -176,7 +203,7 @@
   </section>
 
   <section class="tab-panel astrology-panel" data-panel="astrology" hidden aria-labelledby="tab-astrology">
-    <div class="page-hero"><p>THREE MEASURES</p><h1>三術とは、<br>三つの占いを混ぜることではない。</h1><span>同じ人物・同じ問いを、由来も計算体系も着眼点も異なる三つの占術で読みます。多数決で正解を作るためではなく、時間配分を考える視野を広げるためです。</span></div>
+    <div class="page-hero visual-hero visual-compass"><p>THREE MEASURES</p><h1>三術とは、<br>三つの占いを混ぜることではない。</h1><span>同じ人物・同じ問いを、由来も計算体系も着眼点も異なる三つの占術で読みます。多数決で正解を作るためではなく、時間配分を考える視野を広げるためです。</span></div>
     <section class="measure-definition">
       <div class="definition-icon"><i class="ph ph-compass-rose"></i></div>
       <div><small>POSITIONING</small><h2>三術は、時間配分を捉え直す三つの物差し。</h2><p>仕事に真剣な人ほど、意思決定の材料を集め、比較し、合理的に考えます。一方で、合理分析は「すでに把握できている情報」と「いま採用している評価軸」の内側で精度を上げる営みでもあります。</p><p>三術は、その外側から別の仮説を持ち込むために使います。運命へ従うのではなく、「そもそも何を資源と見なしているか」「どの時間軸で考えているか」「誰との関係が行動を左右するか」を測り直し、配分を決める材料にします。</p></div>
@@ -202,12 +229,12 @@
   </section>
 
   <section class="tab-panel case-panel" data-panel="case" hidden aria-labelledby="tab-case">
-    <div class="page-hero case-hero"><p>CASE / ILLUSTRATIVE</p><h1>選択肢を減らすのではなく、<br>時間の置き方を変える。</h1><span>以下はサービス体験を具体化するための架空ケースです。架空の出生条件を計算エンジンへ入力した例示であり、実在人物の鑑定や成果保証ではありません。ここでは仕事を題材にしていますが、<strong>扱うテーマは仕事に限りません</strong>。趣味、育児、結婚生活、休養なども同じ枠組みで扱います。</span></div>
+    <div class="page-hero case-hero tone-dark"><p>CASE / ILLUSTRATIVE</p><h1>選択肢を減らすのではなく、<br>時間の置き方を変える。</h1><span>以下はサービス体験を具体化するための架空ケースです。架空の出生条件を計算エンジンへ入力した例示であり、実在人物の鑑定や成果保証ではありません。ここでは仕事を題材にしていますが、<strong>扱うテーマは仕事に限りません</strong>。趣味、育児、結婚生活、休養なども同じ枠組みで扱います。</span></div>
     <section class="case-profile"><div><span>PERSONA</span><strong>32歳</strong><small>戦略コンサルティングファーム<br>シニアコンサルタント</small><small class="case-birth-data">架空出生条件：1994.02.16<br>08:40／東京都／男性</small></div><blockquote>「全部、将来に効く。だから全部を続けて、どれも決め手を欠いている。」</blockquote></section>
     <section class="case-before" aria-labelledby="before-title"><div class="case-stage"><span>01</span><small>BEFORE</small><h2 id="before-title">忙しいのではなく、<br>未来を四つ同時に買おうとしていた。</h2></div><div class="case-narrative"><p>半年後のマネージャー昇格を打診され、社内評価は高い。一方、以前の上司から、上場準備中の事業会社で経営企画マネージャー候補として声がかかっている。週末には、友人とB2Bサービスの顧客ヒアリングを始め、翌年のMBA出願に向けて英語学習も続けている。</p><p>平日は案件と社内活動で約60時間。火曜と木曜の夜は英語、土曜午前は新規事業、日曜夕方は転職先の情報収集に使う。すべて将来の選択肢を残す合理的な行動に見える。しかし、毎週の自由時間を細切れに配り、どのテーマにも十分な集中が生まれない。</p><div class="case-pulse"><div><small>現職</small><strong>週60h</strong><span>評価は高いが、管理職になる意味を言語化できない</span></div><div><small>MBA</small><strong>週4h</strong><span>学習は継続。出願後に何を得たいかが曖昧</span></div><div><small>新規事業</small><strong>週4h</strong><span>議論は増えるが、顧客への接触は月2件</span></div><div><small>転職検討</small><strong>週3h</strong><span>情報収集は進むが、判断基準が増え続ける</span></div></div><div class="case-emotion"><i class="ph ph-waveform"></i><p><strong>内側で起きていること</strong><span>「どれかを止めれば後悔する」という感覚から、選択肢を残す活動そのものが目的化。忙しさはあるが、自分が未来を選んでいる感覚は薄い。</span></p></div></div></section>
     <section class="case-tca" aria-labelledby="tca-case-title"><div class="case-stage"><span>02</span><small>TCA / 29,800円＋税</small><h2 id="tca-case-title">「どれを選ぶか」から、<br>「1000日後に何を持つか」へ。</h2></div><div class="case-narrative">
       <article class="case-action"><i class="ph ph-chats-circle"></i><div><small>3 CHAT RALLIES</small><h3>問いを、選択肢の比較から資本配分へ変えた。</h3><p>当初の質問は「現職に残るか、事業会社へ移るか、新規事業か、MBAか」。ラリーを通じ、目標は肩書の選択ではなく「3年後に、自分で事業と組織を動かせる立場を得ること」と分かった。</p><p>そこでScopeを、「1000日後に事業を動かす選択権を持つために、次の100日でどの経験・関係・成果へ時間を投じるか」へ固定。収入最大化や転職時期の断定は今回の対象外にした。</p></div></article>
-      <article class="case-action"><i class="ph ph-identification-card"></i><div><small>WHO YOU ARE / 1 PAGE</small><h3>詳細を読む前に、「今回の問いに関係する自分」を一枚で置いた。</h3><p>Who You Areは、一般的な性格診断の要約ではありません。三術の所見のうち、今回の論点と時間配分に関係するものだけを先に整理し、その後のレポートを読む共通前提にします。このケースでは、次の四点を一枚にまとめます。</p><div class="who-grid"><div><span>VALUE CREATION</span><strong>複雑な状況を読み、構想を他者が動ける形へ変える。</strong></div><div><span>INNER DRIVE</span><strong>既存の正解をなぞるより、組織や事業の仕組み自体を変えたい。</strong></div><div><span>RECURRING TENSION</span><strong>可能性を蓄積したい自分と、すぐ動いて試したい自分が競合する。</strong></div><div><span>BEST CONDITIONS</span><strong>静かに構造化する時間と、未完成でも外へ出す時間を分ける。</strong></div></div><p class="tbd-note">※Who You Areの固定項目・見せ方はトライアルで検証し、別途定義します。</p></div></article>
+      <article class="case-action"><i class="ph ph-identification-card"></i><div><small>WHO YOU ARE</small><h3>詳細を読む前に、「今回の問いに関係する自分」を一枚で置いた。</h3><p>Who You Areは、一般的な性格診断の要約ではありません。三術の所見のうち、今回の論点と時間配分に関係するものだけを先に整理し、その後のレポートを読む共通前提にします。このケースでは、次の四点を一枚にまとめます。</p><div class="who-grid"><div><span>VALUE CREATION</span><strong>複雑な状況を読み、構想を他者が動ける形へ変える。</strong></div><div><span>INNER DRIVE</span><strong>既存の正解をなぞるより、組織や事業の仕組み自体を変えたい。</strong></div><div><span>RECURRING TENSION</span><strong>可能性を蓄積したい自分と、すぐ動いて試したい自分が競合する。</strong></div><div><span>BEST CONDITIONS</span><strong>静かに構造化する時間と、未完成でも外へ出す時間を分ける。</strong></div></div><p class="tbd-note">※Who You Areの固定項目・見せ方はトライアルで検証し、別途定義します。</p></div></article>
       <article class="case-action"><i class="ph ph-compass-rose"></i><div><small>THREE MEASURES / ENGINE-CALCULATED EXAMPLE</small><h3>三術が、別々の角度から前提を揺らした。</h3>
         <p class="case-method-note">架空出生条件「1994年2月16日 08:40／東京都／男性」を計算エンジンへ入力した例です。三術を最初から一つの物語へ混ぜず、各体系の配置と今回の問いへの含意を独立して読んでいます。</p>
         <section class="lens-analysis">
@@ -249,7 +276,7 @@
   </section>
 
   <section class="tab-panel support-panel" data-panel="support" hidden aria-labelledby="tab-support">
-    <div class="page-hero"><p>FOCUSED ACCOMPANIMENT</p><h1>理解から実行までの距離を、<br>4週間だけ一緒に詰める。</h1><span>初回レポート後、必要な方だけ。毎週60分の面談枠を4週間ぶんお渡しし、Action Commitmentを現実の予定と行動へ移して、毎週の証拠から時間配分を更新します。</span></div>
+    <div class="page-hero visual-hero visual-door"><p>FOCUSED ACCOMPANIMENT</p><h1>理解から実行までの距離を、<br>4週間だけ一緒に詰める。</h1><span>初回レポート後、必要な方だけ。毎週60分の面談枠を4週間ぶんお渡しし、Action Commitmentを現実の予定と行動へ移して、毎週の証拠から時間配分を更新します。</span></div>
     <section class="ticket-card"><i class="ph ph-video-camera"></i><div><p>INCLUDED / EVERY WEEK</p><h2>毎週60分の面談枠</h2><span>4週間、毎週60分の枠をお渡しします。その週の60分をどう使うかは自由です。まとめて話したい週も、短く何度も確認したい週もあるからです。</span></div><ul><li><b>使い方の例：</b>60分×1回／30分×2回／15分×4回／10分×6回</li><li><b>形式：</b>オンライン面談。日程は毎週の初めに調整します</li><li><b>繰越：</b>使わなかった枠は翌週へ繰り越しません</li></ul></section>
     <section class="support-definition"><div><i class="ph ph-path"></i><p>MADE FOR YOUR COMMITMENT</p><h2>固定カリキュラムではありません。<br>初回で宣言した一テーマから設計します。</h2></div><div><p>転職活動を始める人、現職で新しい役割を作る人、MBA出願時間を捻出する人では、確保する時間も、最初の行動も、確認すべき証拠も異なります。</p><p>伴走開始時に、4週間で何を変えるか、何を観察するか、いつ縮小・停止するかを合意します。週次では反省会をするのではなく、実際に使った時間と現実の反応から、次週の配分を選び直します。</p><div class="price-block"><span>初回29,800円＋税に追加</span><strong>39,800<em>円＋税</em></strong><small>税込43,780円／毎週60分の面談枠×4週・1テーマ・追加鑑定チケット1回</small></div></div></section>
     <section class="bespoke-examples" aria-labelledby="bespoke-title"><div class="section-heading"><p>BESPOKE BY DESIGN</p><h2 id="bespoke-title">同じ4週間でも、<br>設計はここまで変わる。</h2></div><div><article><i class="ph ph-buildings"></i><h3>現職で役割を変える</h3><p>上司・関係者との対話、引き受ける課題、手放す業務を設計。役割変更の反応を証拠にする。</p></article><article><i class="ph ph-house-line"></i><h3>家族との時間を守る</h3><p>守りたい時間を先に固定。残りは、定型業務のAI化も含めて使い方を棚卸しし、組み直す。</p></article><article><i class="ph ph-student"></i><h3>MBA・外部学習を進める</h3><p>学習量だけでなく、出願後に得たい資本と接続。維持・加速・停止を判断できる基準を置く。</p></article></div></section>
@@ -259,7 +286,7 @@
   </section>
 
   <section class="tab-panel profile-panel" data-panel="profile" hidden aria-labelledby="tab-profile">
-    <div class="page-hero"><p>WHO YOU WORK WITH</p><h1>Noah</h1></div>
+    <div class="page-hero tone-dark"><p>WHO YOU WORK WITH</p><h1><span class="profile-role">鑑定士</span> Noah</h1></div>
 
     <section class="measure-definition">
       <div class="definition-icon"><i class="ph ph-briefcase"></i></div>
@@ -316,7 +343,7 @@
   </section>
 
   <section class="tab-panel pricing-panel" data-panel="pricing" hidden aria-labelledby="tab-pricing">
-    <div class="page-hero"><p>PRICE &amp; QUESTIONS</p><h1>料金とサービス内容</h1><span>まずは初回のTime Allocation Summaryから。4週間の伴走は、レポートを受け取ってから決めていただけます。</span></div>
+    <div class="page-hero tone-dark"><p>PRICE &amp; QUESTIONS</p><h1>料金とサービス内容</h1><span>まずは初回のTime Allocation Summaryから。4週間の伴走は、レポートを受け取ってから決めていただけます。</span></div>
     <div class="pricing-cards"><article class="price-card primary"><div class="card-top"><span>TIME CAPITAL ALLOCATION</span><small>まずはこちら</small></div><h2>Time Allocation Summary</h2><p>目標や望みから問いを再構築し、三術の独立解釈を仕事の現実へ翻訳。専用レポートを受け取り、本人の行動宣言まで進みます。</p><div class="big-price"><small>初回トライアル</small><strong>29,800<em>円＋税</em></strong><small>税込32,780円</small></div><ul><li>事前チャット3ラリーとScope Lock</li><li>算命学・インド占星術・西洋占星術の独立分析</li><li>今回の問いに関係するWho You Are 1ページ</li><li>テーラーメイドTime Allocation Summary</li><li>事実・根拠・適用範囲のリバイス1回</li><li>本人によるAction Commitment</li></ul><button class="primary-button full" type="button" data-apply>申込希望を送る</button></article><article class="price-card option"><div class="card-top"><span>OPTION</span><small>初回レポート受領後でも可</small></div><h2>4週間の短期集中伴走</h2><p>Action Commitmentを現実の予定へ置き、実行と反応を毎週確認。時間配分を更新し、自力運用へ戻すためのオーダーメイド期間です。</p><div class="big-price"><small>初回に追加</small><strong>39,800<em>円＋税</em></strong><small>税込43,780円</small></div><ul><li><b>毎週60分の面談枠×4週</b>（分割自由）</li><li>1テーマ限定の4週間設計</li><li>週次の実行・証拠・配分確認</li><li>継続・拡大・縮小・停止の再判断</li><li>終了時の差分メモと次回見直し日</li><li>追加鑑定チケット1回（自由記述300文字以内）</li></ul><button class="outline-button full" type="button" data-tab-target="support">伴走内容を詳しく見る</button></article></div>
     <section class="faq-section"><div class="section-heading"><p>Q&amp;A</p><h2>よくある質問</h2></div><div class="faq-list"><details open><summary>はっきり「こうすべき」と言ってほしいのですが。</summary><p>言い切れる部分は言い切ります。そのうえで「どこまでが根拠のある話で、どこからが仮説か」を必ず区別して書きます。根拠のない断定は、その場は安心しますが、状況が変わったときに使えません。逆に「三術ではここまでしか読めない。ただし仕事の現実から見れば、この配分が妥当だ」という形での踏み込みは行います。<br><strong>あなたの背中を押します。ただし単に「占術がそう言っているから」だけでなく、「あなたが何のために、何に時間を使うと決めたか」を軸として後押しします。</strong></p></details><details><summary>これは、占いでキャリアの正解を決めるサービスですか。</summary><p>三術は、時間配分を捉え直すための三つの物差しです。解釈には採用条件と反証条件が付きます。だから「なんとなく信じる／信じない」で終わりません。どれを採り、何を保留し、どう行動するかを決めるのはあなたです。そして、決め切るまでは一緒に進みます。</p></details><details><summary>仕事やキャリア以外のことでも相談できますか。</summary><p>できます。趣味、育児、結婚生活、学び直し、休養。有限な時間を何へ投じるかという問いであれば、テーマは問いません。Caseで仕事を題材にしているのは、時間配分の葛藤がいちばん見えやすいからです。<br>また、前へ進むための相談だけでなく、「いま動けない」「うまく言葉にならない」という状態からのご相談も受けています。無理に前向きな結論へ運びません。いま何ができて、何ができないかを一緒に確かめて、いちばん小さな次の一歩まで一緒に降ります。</p></details><details><summary>通常のキャリアコーチングとの違いは何ですか。</summary><p>本人の語りの中だけから答えを引き出すことを主商品にしません。問いを整えた後、本人のストーリーとは独立した三術の読みを持ち込み、戦略コンサル・投資ファンドの実務経験を持つ鑑定士が、役割・機会費用・時間軸へ翻訳します。完成物としてレポートとAction Commitmentが残ります。</p></details><details><summary>29,800円＋税で、どこまで含まれますか。</summary><p>申込確認、チャット3ラリー、三術の独立分析、今回の問いに関係するWho You Are 1ページ、テーラーメイドのTime Allocation Summary、1回リバイス、Action Commitmentまでです（税込32,780円）。4週間の短期集中伴走と追加鑑定チケットは含まれず、別途39,800円＋税（税込43,780円）です。</p></details><details><summary>39,800円＋税のオプションは、いつ決めますか。</summary><p>初回レポートを受け取ってからで構いません。自力で進められる場合は不要です。</p></details><details><summary>4週間の伴走では、実際に何が行われますか。</summary><p>毎週60分の面談枠を4週間ぶんお渡しします。その週の60分は、60分×1回でも、30分×2回でも、15分×4回でも、使い方は自由です。オンラインで実施し、日程は毎週の初めに調整します。使わなかった枠は翌週へ繰り越しません。面談では、実際に使った時間と現実の反応を確認し、次週の配分を選び直します。</p></details><details><summary>三術の説明が食い違った場合はどうなりますか。</summary><p>無理に一つの結論へまとめません。共通点は検討優先度を上げ、異なる読みは「どの条件なら、どちらが現れるか」という仮説として残します。入力条件から十分に読めない部分は保留にします。</p></details><details><summary>出生時刻が正確に分からなくても依頼できますか。</summary><p>申込段階で確認します。入力時刻の幅によって解釈が変わる部分は、適用範囲を狭めるか除外します。今回の問いに十分な品質を出せない場合は、決済前にお伝えします。</p></details><details><summary>勤務先や案件の情報は必要ですか。</summary><p>第三者を特定できる非公開情報、顧客名、案件名、投資先名、社内資料は入力しないでください。役割、選択肢、制約、実現したい状態を抽象化した情報で進めます。</p></details></div></section>
   </section>
@@ -329,17 +356,64 @@
 <div class="dialog-backdrop" id="legal-dialog" hidden><div class="dialog legal-dialog" role="dialog" aria-modal="true" aria-labelledby="legal-title" tabindex="-1"><button class="dialog-close" type="button" data-close aria-label="閉じる">×</button><div id="legal-content"></div></div></div>
 
 <script>
+  document.body.classList.add('js');
   const panels=[...document.querySelectorAll('[data-panel]')];
   const tabButtons=[...document.querySelectorAll('[role="tab"][data-tab-target]')];
   function selectTab(id){
     panels.forEach(panel=>panel.hidden=panel.dataset.panel!==id);
     tabButtons.forEach(button=>button.setAttribute('aria-selected',String(button.dataset.tabTarget===id)));
+    document.body.classList.toggle('overview-active',id==='overview');
+    if(id==='overview') setStoryBackground('clock');
     history.replaceState(null,'','#'+id);
-    scrollTo({top:0,behavior:'smooth'});
+    scrollTo({top:0,behavior:'auto'});
   }
   document.querySelectorAll('[data-tab-target]').forEach(button=>button.addEventListener('click',()=>selectTab(button.dataset.tabTarget)));
+
+  const storyScenes=[...document.querySelectorAll('.overview-v2 [data-story-bg]')];
+  const storyImages=[...document.querySelectorAll('[data-story-image]')];
+  const storyOverview=document.querySelector('.overview-v2');
+  function setStoryBackground(name){
+    document.body.dataset.storyBackground=name;
+    storyImages.forEach(image=>image.classList.toggle('is-active',image.dataset.storyImage===name));
+  }
+  setStoryBackground('clock');
+
+  if('IntersectionObserver' in window){
+    const backgroundObserver=new IntersectionObserver(entries=>{
+      const visible=entries.filter(entry=>entry.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
+      if(visible) setStoryBackground(visible.target.dataset.storyBg);
+    },{rootMargin:'-30% 0px -46%',threshold:[0,.08,.18,.35,.6]});
+    const revealObserver=new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },{rootMargin:'0px 0px -10%',threshold:.08});
+    storyScenes.forEach(scene=>{backgroundObserver.observe(scene);revealObserver.observe(scene)});
+  }else{
+    storyScenes.forEach(scene=>scene.classList.add('is-visible'));
+  }
+
+  let storyTicking=false;
+  function updateStoryProgress(){
+    storyTicking=false;
+    if(!storyOverview || storyOverview.hidden) return;
+    const start=storyOverview.offsetTop;
+    const distance=Math.max(1,storyOverview.offsetHeight-innerHeight);
+    const progress=Math.max(0,Math.min(1,(scrollY-start)/distance));
+    document.body.style.setProperty('--story-progress',progress.toFixed(4));
+  }
+  addEventListener('scroll',()=>{
+    if(!storyTicking){storyTicking=true;requestAnimationFrame(updateStoryProgress)}
+  },{passive:true});
+  addEventListener('resize',updateStoryProgress,{passive:true});
+  updateStoryProgress();
+
   const initialTab=location.hash.slice(1);
   if(panels.some(panel=>panel.dataset.panel===initialTab)) selectTab(initialTab);
+  else document.body.classList.add('overview-active');
 
   const applicationDialog=document.querySelector('#application-dialog');
   const legalDialog=document.querySelector('#legal-dialog');
