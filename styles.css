@@ -43,11 +43,10 @@ a{color:inherit}
 .hero h1{margin:0;color:var(--navy);font-family:var(--serif);font-size:clamp(46px,4.4vw,58px);font-weight:600;line-height:1.25;letter-spacing:-.045em}
 .hero h1 em{position:relative;font-size:.76em;font-style:normal;white-space:nowrap}
 .hero h1 em::after{position:absolute;z-index:-1;right:-4px;bottom:7px;left:-3px;height:14px;content:"";background:var(--lemon);opacity:.9}
-@media(min-width:1081px){.hero h1 br:first-of-type{display:none}}
 .support-end.coming-soon{margin-bottom:60px}
 .big-price small:last-child{display:block;margin-top:6px}
 .hero-lead{max-width:610px;margin:34px 0 0;color:#23344b;font-family:var(--serif);font-size:19px;font-weight:600;line-height:1.9}
-.hero-option-note{display:grid;grid-template-columns:21px 1fr;gap:8px;max-width:600px;margin:13px 0 0;color:var(--muted);font-size:10px;line-height:1.8}
+.hero-option-note{display:grid;grid-template-columns:21px 1fr;gap:8px;max-width:600px;margin:30px 0 0;padding-top:22px;border-top:1px solid var(--line);color:var(--muted);font-size:11px;line-height:1.8}
 .hero-option-note .ph{padding-top:2px;font-size:17px}
 .hero-note{max-width:595px;margin:16px 0 0;color:var(--muted);font-size:13px;line-height:1.95}
 .hero-actions{display:flex;align-items:center;gap:24px;margin-top:30px}
@@ -445,7 +444,7 @@ a{color:inherit}
 }
 @media(max-width:640px){
   body{padding-bottom:calc(74px + env(safe-area-inset-bottom));font-size:15px}.site-header{padding-inline:16px}.header-cta{display:none}.wordmark span{font-size:14px}.tab-panel{width:min(calc(100% - 30px),var(--max));padding:42px 0 80px}.overview-panel{padding-top:0}
-  .hero{gap:45px;padding:48px 0 70px}.hero h1{font-size:clamp(26px,8.4vw,33px);line-height:1.42}.hero h1 em{font-size:.8em;letter-spacing:-.05em}.hero h1 em::after{bottom:4px;height:9px}.hero-lead{margin-top:24px;font-size:16px;line-height:1.9}.hero-option-note{font-size:9px}.hero-note{font-size:12px}.hero-actions{display:grid;gap:16px}.hero-actions .primary-button{width:100%}.hero-actions .text-button{justify-self:start}.hero-proof{display:grid;gap:8px;margin-top:24px}
+  .hero{gap:45px;padding:48px 0 70px}.hero h1{font-size:clamp(26px,8.4vw,33px);line-height:1.42}.hero h1 em{letter-spacing:-.05em}.hero h1 em::after{bottom:4px;height:9px}.hero-lead{margin-top:24px;font-size:16px;line-height:1.9}.hero-option-note{font-size:9px}.hero-note{font-size:12px}.hero-actions{display:grid;gap:16px}.hero-actions .primary-button{width:100%}.hero-actions .text-button{justify-self:start}.hero-proof{display:grid;gap:8px;margin-top:24px}
   .offer-summary{padding:28px 23px}.offer-summary h2{font-size:31px}.offer-intro{font-size:11px}.offer-deliverables small{font-size:9px}.offer-price strong{font-size:31px}
   .editorial-intro{grid-template-columns:1fr;gap:20px;padding:85px 0 55px}.section-index{display:flex;align-items:center;gap:12px}.section-index span{font-size:26px}.section-index small{writing-mode:horizontal-tb}.editorial-heading h2{font-size:30px;line-height:1.65}.editorial-copy{grid-column:auto}.editorial-copy p{font-size:13px}
   .journey{padding-bottom:85px}.journey article{grid-template-columns:52px 1fr;gap:18px;padding:34px 0}.journey-icon{width:48px;height:48px}.journey-icon .ph{font-size:23px}.journey h3{font-size:20px}.journey p{font-size:12px}
@@ -466,7 +465,6 @@ a{color:inherit}
   .offer-summary h2 br{display:inline}
   h1,h2,h3{text-wrap:balance}
   .hero h1,.offer-summary h2{text-wrap:wrap}
-  .hero h1 em{font-size:.72em}
   /* 2. タブナビを画面内に収め、右端フェードで「続きがある」ことを示す */
   .tab-nav{gap:15px;-webkit-mask-image:linear-gradient(to right,#000 92%,transparent);mask-image:linear-gradient(to right,#000 92%,transparent)}
   .tab-nav button{font-size:10.5px}
@@ -543,7 +541,6 @@ a{color:inherit}
 @media(max-width:360px){
   /* 極小幅では文節単位の折返しが収まらないため、通常の折返しへ戻す */
   h1,h2,h3{word-break:normal}
-  .hero h1 em{font-size:.78em}
   .case-profile blockquote{font-size:22px}
   .case-stage h2{font-size:21px}
 }
