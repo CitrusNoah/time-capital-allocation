@@ -885,8 +885,10 @@ body[data-story-background="dark"] .story-backdrop-shade{background:radial-gradi
   /* スマホは3行を同サイズに揃え、最長行「時間資本の配分を再定義する。」が収まる寸法にする */
   .overview-v2 .hero h1{font-size:clamp(19px,6.4vw,27px);line-height:1.5}
   .overview-v2 .hero h1 em{font-size:1em}
-  .overview-v2 .hero h1 em::after{bottom:3px;height:7px}
-  .overview-v2 .hero-lead{font-size:16px;line-height:1.9}
+  /* ハイライトは絶対配置の帯だと折返し時に最終行へしか付かないため、行ごとに複製される背景方式へ */
+  .overview-v2 .hero h1 em::after{display:none}
+  .overview-v2 .hero h1 em{padding:0 3px;background-image:linear-gradient(var(--lemon),var(--lemon));background-image:linear-gradient(color-mix(in srgb,var(--lemon) 84%,transparent),color-mix(in srgb,var(--lemon) 84%,transparent));background-repeat:no-repeat;background-position:0 88%;background-size:100% 8px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .overview-v2 .hero-lead{font-size:13.5px;line-height:1.85}
   .overview-v2 .offer-summary{padding:30px 23px 27px;backdrop-filter:blur(9px)}
   .overview-v2 .offer-summary h2{font-size:34px}
   .overview-v2 .offer-deliverables small{font-size:11px}
