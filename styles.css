@@ -653,7 +653,9 @@ body[data-story-background="dark"] .story-backdrop-shade{background:radial-gradi
 .overview-v2 .hero h1 em::after{display:none}
 .overview-v2 .eyebrow{color:rgba(255,255,255,.72)}
 .overview-v2 .eyebrow span{color:var(--navy);background:var(--lemon)}
-.overview-v2 .hero-lead{font-size:clamp(17px,1.55vw,20px);line-height:1.9}
+/* リードは下段のhero-noteと同じ書体・サイズに揃え、要所のみ太字で立てる */
+.overview-v2 .hero-lead{font-family:var(--sans);font-size:13px;font-weight:400;line-height:1.95;color:rgba(255,255,255,.86)}
+.overview-v2 .hero-lead strong{color:#fff;font-weight:800}
 .desktop-line-break{display:none}
 .overview-v2 .hero-note{color:rgba(255,255,255,.77)}
 .overview-v2 .hero-option-note{border-color:rgba(255,255,255,.24);color:rgba(255,255,255,.76)}
@@ -954,7 +956,7 @@ body[data-story-background="dark"] .story-backdrop-shade{background:radial-gradi
   .overview-v2 .hero h1 em{font-size:1em}
   /* ハイライトは絶対配置の帯だと折返し時に最終行へしか付かないため、行ごとに複製される背景方式へ */
   .overview-v2 .hero h1 em::after{display:none}
-  .overview-v2 .hero-lead{font-size:13.5px;line-height:1.85}
+  .overview-v2 .hero-lead{font-size:13.5px;line-height:1.9;text-wrap:pretty}
   .overview-v2 .offer-summary{padding:30px 23px 27px;backdrop-filter:blur(9px)}
   .overview-v2 .offer-summary h2{font-size:34px}
   .overview-v2 .offer-deliverables small{font-size:11px}
