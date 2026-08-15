@@ -650,7 +650,7 @@ body[data-story-background="dark"] .story-backdrop-shade{background:radial-gradi
 .overview-v2 .hero h1,.overview-v2 .hero-lead,.overview-v2 .hero-note,.overview-v2 .hero-proof,.overview-v2 .hero-option-note{color:#fff}
 .overview-v2 .hero h1{font-size:clamp(42px,4.25vw,62px);line-height:1.22}
 .overview-v2 .hero h1 .hl{color:var(--parthenon)}
-.overview-v2 .hero h1 em::after{z-index:-1;left:3.88em;background:var(--lemon);opacity:.84}
+.overview-v2 .hero h1 em::after{display:none}
 .overview-v2 .eyebrow{color:rgba(255,255,255,.72)}
 .overview-v2 .eyebrow span{color:var(--navy);background:var(--lemon)}
 .overview-v2 .hero-lead{font-size:clamp(17px,1.55vw,20px);line-height:1.9}
@@ -954,7 +954,6 @@ body[data-story-background="dark"] .story-backdrop-shade{background:radial-gradi
   .overview-v2 .hero h1 em{font-size:1em}
   /* ハイライトは絶対配置の帯だと折返し時に最終行へしか付かないため、行ごとに複製される背景方式へ */
   .overview-v2 .hero h1 em::after{display:none}
-  .overview-v2 .hero h1 em{padding:0 3px;background-image:linear-gradient(var(--lemon),var(--lemon));background-image:linear-gradient(color-mix(in srgb,var(--lemon) 84%,transparent),color-mix(in srgb,var(--lemon) 84%,transparent));background-repeat:no-repeat;background-position:3.88em 88%;background-size:calc(100% - 3.88em) 8px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
   .overview-v2 .hero-lead{font-size:13.5px;line-height:1.85}
   .overview-v2 .offer-summary{padding:30px 23px 27px;backdrop-filter:blur(9px)}
   .overview-v2 .offer-summary h2{font-size:34px}
