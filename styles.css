@@ -1016,3 +1016,215 @@ body[data-story-background="dark"] .story-backdrop-shade{background:radial-gradi
   .overview-v2 .hero,.overview-v2 .editorial-intro,.overview-v2 .journey,.overview-v2 .service-deep-dive,.overview-v2 .case-teaser,.overview-v2 .difference-section,.overview-v2 .option-editorial{width:100%;min-height:auto;padding:18mm 0;color:#000;background:#fff}
   .overview-v2 .hero h1,.overview-v2 .hero-lead,.overview-v2 .hero-note,.overview-v2 .editorial-heading h2,.overview-v2 .deep-copy h2,.overview-v2 .case-teaser-copy h2,.overview-v2 .section-heading h2,.overview-v2 .option-heading h2{color:#000}
 }
+
+
+/* ============================================================
+   v3（20260817）
+   ①概要タブを白基調へ ②タブホバーの目次メガメニュー
+   ③スクロール誘導の拡大とセンタリング ④罫線でのセクション区切り
+   CTAボタンは原色Parthenonブルー＋白字
+   ============================================================ */
+
+/* --- CTA：原色ブルー×白字 --- */
+.primary-button{color:#fff;background:var(--parthenon)}
+.header-cta{color:#fff;background:var(--parthenon)}
+.header-cta span{color:#eaf5ff}
+.mobile-cta-bar button{color:#fff;background:var(--parthenon)}
+.overview-v2 .hero-actions .primary-button{color:#fff;background:var(--parthenon);box-shadow:0 14px 34px rgba(26,154,250,.3)}
+.overview-v2 .option-actions .secondary-button.light{color:#fff;background:var(--parthenon)}
+
+/* --- ① 概要タブ：白基調 --- */
+.v2-site .overview-panel{background:#fff}
+.overview-v2 .story-scene{color:inherit}
+.overview-v2 .story-scene .ph{color:var(--parthenon)}
+.overview-v2 .hero-copy{text-shadow:none}
+.overview-v2 .hero h1{color:var(--navy)}
+.overview-v2 .hero h1 .hl{color:var(--parthenon)}
+.overview-v2 .hero-lead{color:#33445c}
+.overview-v2 .hero-lead strong{color:var(--navy)}
+.overview-v2 .hero-note{color:var(--muted)}
+.overview-v2 .hero-note strong{color:var(--navy)}
+.overview-v2 .eyebrow{color:var(--muted)}
+.overview-v2 .eyebrow span{color:#fff;background:var(--navy)}
+.overview-v2 .hero-actions .text-button{color:var(--navy);text-decoration-color:rgba(11,35,70,.3)}
+.overview-v2 .story-scene .section-heading>p{color:var(--parthenon-text)}
+.overview-v2 .story-scene .section-heading h2{color:var(--navy)}
+.overview-v2 .story-scene .section-heading>span{color:var(--muted)}
+
+.svc-card{border:1px solid var(--line);background:#fff;box-shadow:0 18px 50px rgba(11,35,70,.08);backdrop-filter:none}
+.svc-card-top .ph{color:var(--parthenon)}
+.svc-card-label{color:var(--parthenon-text)}
+.svc-card h3{color:var(--navy)}
+.svc-card>p{color:var(--muted)}
+.svc-card>p strong{color:var(--navy)}
+.svc-chips li{color:#3c4c63}
+.svc-chips .ph{color:var(--parthenon)}
+.svc-card-price{border-top-color:var(--line)}
+.svc-card-price span,.svc-card-price small{color:var(--muted)}
+.svc-card-price strong{color:var(--navy)}
+.svc-card-link{border:1px solid rgba(11,35,70,.35);color:var(--navy)}
+.svc-card-link .ph{color:var(--parthenon)}
+.svc-note{color:var(--muted)}
+
+.wayfinding-list{border-color:var(--line);background:var(--line)}
+.wayfinding-list button{color:var(--ink);background:#fff;backdrop-filter:none}
+.wayfinding-list strong{color:var(--parthenon-text)}
+.wayfinding-list span{color:var(--muted)}
+.wayfinding-list .ph{color:var(--parthenon)}
+
+.svc-points{border-color:var(--line);background:var(--line)}
+.svc-points>div{background:#fff;backdrop-filter:none}
+.svc-points .ph{color:var(--parthenon)}
+.svc-points strong{color:var(--navy)}
+.svc-points small{color:var(--muted)}
+
+.measures-rows{border-color:var(--line);background:var(--line)}
+.measures-rows>div{background:#fff}
+.measures-rows strong{color:var(--navy)}
+.measures-rows span{color:var(--muted)}
+.measures-why{color:#33445c}
+.measures-why strong{color:var(--navy)}
+.measures-brief .inline-link{color:var(--navy);text-decoration-color:rgba(11,35,70,.3)}
+
+.overview-v2 .difference-list h3{color:var(--navy)}
+.overview-v2 .difference-list p{color:var(--muted)}
+.overview-v2 .difference-list p strong{color:var(--navy)}
+
+.overview-v2 .option-editorial{color:inherit;background:transparent}
+.overview-v2 .option-kicker{color:var(--parthenon-text)}
+.overview-v2 .option-main h2{color:var(--navy)}
+.overview-v2 .option-main p{color:var(--muted)}
+.overview-v2 .option-main p strong{color:var(--navy)}
+.overview-v2 .option-price{border:1px solid var(--line);background:var(--surface);color:var(--navy);padding:18px 22px}
+.overview-v2 .option-price span,.overview-v2 .option-price small{color:var(--muted)}
+.overview-v2 .option-price strong{color:var(--navy)}
+.overview-v2 .option-values article{border-top:1px solid var(--line)}
+.overview-v2 .option-values .ph{color:var(--parthenon)}
+.overview-v2 .option-values h3{color:var(--navy)}
+.overview-v2 .option-values p{color:var(--muted)}
+.overview-v2 .option-values p strong{color:var(--navy)}
+.overview-v2 .option-actions>span{color:var(--muted)}
+.option-ticket-note{max-width:760px;margin:30px 0 0;color:var(--muted);font-size:12.5px;line-height:1.9}
+
+/* --- ④ トランジション廃止に伴う罫線区切り --- */
+.overview-v2 .svc-index,.overview-v2 .svc-detail,.overview-v2 .measures-brief,.overview-v2 .difference-section,.overview-v2 .option-editorial{border-top:1px solid var(--line)}
+.overview-v2 .svc-index{padding:11svh 0 9svh}
+.overview-v2 .wayfinding{padding:4svh 0 11svh}
+.overview-v2 .svc-detail{padding:11svh 0 150px}
+.overview-v2 .measures-brief{padding:9svh 0 11svh}
+.overview-v2 .difference-section{padding-top:9svh}
+.overview-v2 .option-editorial{padding-top:9svh}
+.overview-v2 .hero{min-height:calc(92svh - 76px);padding:64px 0 96px}
+
+/* --- ③ スクロール誘導：拡大＋COMMITはセンタリング --- */
+.story-scroll-cue{gap:14px;color:#4c5c74}
+.story-scroll-cue span{width:2px;height:64px;background:rgba(11,35,70,.16)}
+.story-scroll-cue span::after{top:-32px;width:2px;height:30px;background:var(--parthenon)}
+.story-scroll-cue small{font-size:11px;font-weight:850;letter-spacing:.26em}
+.story-section-cue{right:0;bottom:34px;left:0;justify-content:center}
+
+/* --- ② タブメガメニュー --- */
+.tab-megamenu{position:absolute;top:100%;right:0;left:0;display:none;padding:14px max(24px,calc((100vw - 1280px)/2)) 18px;border-top:1px solid var(--line);background:#fff;box-shadow:0 26px 50px rgba(11,35,70,.14)}
+.tab-megamenu.is-open{display:flex;flex-wrap:wrap;gap:4px 36px}
+.tab-megamenu button{display:inline-flex;align-items:center;gap:9px;min-height:40px;padding:0;border:0;background:transparent;color:var(--navy);font-size:12.5px;font-weight:750}
+.tab-megamenu button::before{width:5px;height:5px;border-radius:50%;content:"";background:var(--parthenon)}
+.tab-megamenu button:hover{color:var(--parthenon-text);text-decoration:underline;text-underline-offset:5px}
+@media(max-width:860px){.tab-megamenu{display:none!important}}
+[id]{scroll-margin-top:104px}
+/* 旧ダークテーマの「.overview-v2 p strong{color:#fff}」より後勝ちで打ち消す */
+.overview-v2 p strong{color:var(--navy)}
+
+/* ============================================================
+   v3-b（20260817）概要タブの背景写真＋曇りガラス
+   ・上部（タブ帯）は常にフロストでタブ名を読みやすく
+   ・スクロールで --frost が 0→1 になり、全面のガラスが濃くなる
+   ============================================================ */
+body{--frost:0}
+
+.v2-site .overview-panel{background:transparent}
+
+.v3-backdrop{position:fixed;z-index:0;inset:0;overflow:hidden;pointer-events:none}
+.v3-bg{position:absolute;inset:0;
+  background:url("./assets/backgrounds/01_time-capital-analysis-desk_v3_handwritten-final.png") center 42%/cover no-repeat;
+  filter:brightness(1.12) saturate(.97);
+  transform:translateZ(0)}
+/* 曇りガラス本体：白の濃度とぼかしを --frost で連動させる */
+.v3-veil{position:absolute;inset:0;
+  background:rgba(255,255,255,calc(.20 + .72 * var(--frost)));
+  -webkit-backdrop-filter:blur(calc(var(--frost) * 16px)) saturate(calc(1 - .35 * var(--frost)));
+  backdrop-filter:blur(calc(var(--frost) * 16px)) saturate(calc(1 - .35 * var(--frost)))}
+
+/* ヘッダー：概要タブでは曇りガラス。文字は紺のまま読ませる */
+.overview-active .site-header{
+  color:var(--ink);
+  background:rgba(255,255,255,.58);
+  -webkit-backdrop-filter:blur(22px) saturate(1.5);
+  backdrop-filter:blur(22px) saturate(1.5);
+  box-shadow:0 1px 0 rgba(11,35,70,.10)}
+.overview-active .wordmark,.overview-active .tab-nav button{color:#4d5d75}
+.overview-active .wordmark span,.overview-active .wordmark strong,.overview-active .tab-nav button[aria-selected="true"]{color:var(--navy)}
+.overview-active .tab-nav button::after{background:var(--parthenon)}
+.overview-active .header-cta{color:#fff;background:var(--parthenon)}
+.overview-active .header-cta span{color:#eaf5ff}
+/* メガメニューも同じ質感で */
+.overview-active .tab-megamenu{background:rgba(255,255,255,.9);-webkit-backdrop-filter:blur(22px) saturate(1.5);backdrop-filter:blur(22px) saturate(1.5)}
+
+/* Heroは写真を活かすため、区切り線は2番目のセクションから */
+.overview-v2 .svc-index{border-top:0}
+
+@media(prefers-reduced-motion:reduce){
+  .v3-veil{transition:none}
+}
+@media(max-width:860px){
+  /* モバイルは負荷を抑え、ぼかしは控えめに */
+  .v3-veil{-webkit-backdrop-filter:blur(calc(var(--frost) * 10px));backdrop-filter:blur(calc(var(--frost) * 10px))}
+  .v3-bg{background-position:center 40%}
+}
+@media print{
+  .v3-backdrop{display:none!important}
+}
+
+/* ============================================================
+   v3-c（20260817）
+   ①差別化カードの塗りを濃紺ベタ＋白字へ ②Hero見出しを3行
+   ③概要タブの枠線を廃し、影で浮かせる ④マトリクスは横罫線のみ
+   ============================================================ */
+
+/* --- ① ③ 差別化カード：濃紺ベタ＋白字＋影、枠線なし --- */
+.overview-v2 .difference-list article{
+  padding:34px 30px 30px;
+  border:0;
+  background:var(--navy);
+  box-shadow:0 20px 46px rgba(11,35,70,.24)}
+.overview-v2 .difference-list article>span{top:16px;right:20px;color:var(--parthenon-bright)}
+.overview-v2 .difference-list .ph{color:var(--parthenon-bright)}
+.overview-v2 .difference-list h3{color:#fff}
+.overview-v2 .difference-list p{color:rgba(255,255,255,.80)}
+.overview-v2 .difference-list p strong{color:#fff}
+
+/* --- ③ 概要タブ：枠線を消し、影で浮かせる --- */
+.overview-v2 .svc-card{border:0;box-shadow:0 22px 54px rgba(11,35,70,.14)}
+.overview-v2 .wayfinding-list,
+.overview-v2 .svc-points,
+.overview-v2 .measures-rows{border:0;box-shadow:0 18px 44px rgba(11,35,70,.12)}
+.overview-v2 .option-price{border:0;box-shadow:0 14px 34px rgba(11,35,70,.12)}
+/* 「内容を見る」は枠線ではなく塗り＋影のボタンへ */
+.overview-v2 .svc-card-link{
+  border:0;
+  color:#fff;background:var(--parthenon);
+  box-shadow:0 12px 26px rgba(26,154,250,.30)}
+.overview-v2 .svc-card-link .ph{color:#fff}
+
+/* --- ④ マトリクスは横罫線のみ（縦罫線を出さない） --- */
+.case-pulse,.who-grid,.review-list{column-gap:0;row-gap:1px}
+.next-steps span{border-right:0}
+.next-steps span:not(:last-child){border-bottom:1px solid var(--line)}
+
+@media(max-width:860px){
+  .overview-v2 .difference-list article{padding:26px 22px 24px}
+  .overview-v2 .difference-list article>span{top:12px;right:16px}
+}
+/* カード化でテキスト幅が狭まったぶん、見出しを詰めて孤立行を防ぐ */
+@media(min-width:861px){
+  .overview-v2 .difference-list h3{font-size:clamp(16px,1.42vw,20px);line-height:1.55}
+}
