@@ -1177,8 +1177,14 @@ body{--frost:0}
 }
 @media(max-width:860px){
   /* モバイルは負荷を抑え、ぼかしは控えめに */
-  .v3-veil{-webkit-backdrop-filter:blur(calc(var(--frost) * 10px));backdrop-filter:blur(calc(var(--frost) * 10px))}
-  .v3-bg{background-position:center 40%}
+  .v3-veil{background:rgba(255,255,255,calc(.36 + .56 * var(--frost)));
+    -webkit-backdrop-filter:blur(calc(var(--frost) * 10px));backdrop-filter:blur(calc(var(--frost) * 10px))}
+  /* 縦画面に16:9をcoverで敷くと横26%しか映らず、PC(90%)と別物に見える。
+     上部バンドに切り替えて横57%を見せ、下端はマスクで自然に溶かす。 */
+  .v3-bg{inset:0 0 auto 0;height:46svh;
+    background-position:48% center;
+    -webkit-mask-image:linear-gradient(#000 58%,rgba(0,0,0,.55) 82%,transparent);
+    mask-image:linear-gradient(#000 58%,rgba(0,0,0,.55) 82%,transparent)}
 }
 @media print{
   .v3-backdrop{display:none!important}
