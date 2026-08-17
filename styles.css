@@ -1143,7 +1143,11 @@ body{--frost:0}
 
 .v2-site .overview-panel{background:transparent}
 
-.v3-backdrop{position:fixed;z-index:0;inset:0;overflow:hidden;pointer-events:none}
+/* .story-backdrop(v2)の暗色背景と opacity:0 を継承しないよう、ここで明示的に打ち消す。
+   写真が読み込めなかった場合も白へフォールバックする。 */
+.v3-backdrop{position:fixed;z-index:0;inset:0;overflow:hidden;pointer-events:none;
+  background:#fff;opacity:1;transition:none}
+.overview-active .v3-backdrop{opacity:1}
 .v3-bg{position:absolute;inset:0;
   background:url("./assets/backgrounds/01_time-capital-analysis-desk_v3_handwritten-final.png") center 42%/cover no-repeat;
   filter:brightness(1.12) saturate(.97);
@@ -1234,3 +1238,9 @@ body{--frost:0}
 @media(min-width:861px){
   .overview-v2 .difference-list h3{font-size:clamp(16px,1.42vw,20px);line-height:1.55}
 }
+
+/* 画像が読み込めなくても白文字が消えないよう、下地色を必ず敷く（フェイルセーフ） */
+.visual-hero{background-color:var(--navy)}
+.visual-clock{background:var(--navy) url("./assets/backgrounds/01_time-capital-clock.png") 55% center/cover no-repeat}
+.visual-compass{background:var(--navy) url("./assets/backgrounds/02_three-measures-compass.png") 52% center/cover no-repeat}
+.visual-door{background:var(--navy) url("./assets/backgrounds/03_after-report-door.png") 52% center/cover no-repeat}
