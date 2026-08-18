@@ -1304,3 +1304,53 @@ body{--frost:0}
   .overview-v2 .svc-detail{padding-bottom:186px}
   .overview-v2 .difference-section{padding-bottom:176px}
 }
+
+
+/* ============================================================
+   v3-f（20260818）申込フォーム改訂
+   ・相談テーマ 5択（複数選択・最低1つ必須）
+   ・自由記述 800文字（下限なし）
+   ・WHY DIFFERENT 削除 →「扱わないこと」を概要タブ末尾へ
+   ============================================================ */
+
+.form-reassure{margin:0 0 2px;color:var(--navy);font-size:12.5px;font-weight:800;line-height:1.85;letter-spacing:.01em}
+
+/* --- 相談テーマ 5択（複数選択） --- */
+.application-form .theme-field{display:block;min-width:0;margin:0;padding:0;border:0}
+.application-form .theme-field legend{display:block;width:100%;padding:0;color:var(--navy);font-size:12px;font-weight:800}
+.application-form .theme-field legend .field-rule{display:inline-block;margin-left:7px;vertical-align:1px}
+.theme-lead{margin:8px 0 11px;color:var(--muted);font-size:11px;font-weight:500;line-height:1.8}
+.theme-group{display:grid;gap:7px;padding:3px}
+.theme-option{display:grid;grid-template-columns:20px 1fr;align-items:start;gap:12px;margin:0;padding:13px 15px;background:var(--surface);box-shadow:inset 0 0 0 1px var(--line);cursor:pointer;transition:background .18s,box-shadow .18s}
+.theme-option:hover{background:#fff;box-shadow:inset 0 0 0 1px rgba(26,154,250,.55)}
+.application-form .theme-option input{width:18px;min-height:18px;margin:2px 0 0;padding:0;border-radius:3px;accent-color:var(--parthenon)}
+.theme-option>span{display:block;min-width:0}
+.theme-option strong{display:block;color:var(--navy);font-size:13px;font-weight:800;letter-spacing:.01em}
+.theme-option small{display:block;margin-top:5px;color:var(--muted);font-size:11px;font-weight:500;line-height:1.85}
+.theme-option small em{display:block;margin-top:5px;color:var(--parthenon-text);font-style:normal;font-weight:700}
+.theme-option:has(input:checked),.theme-option.is-checked{background:var(--parthenon-soft);box-shadow:inset 0 0 0 1.5px var(--parthenon)}
+.theme-option:has(input:checked) strong,.theme-option.is-checked strong{color:var(--parthenon-text)}
+.theme-option:focus-within{box-shadow:inset 0 0 0 1.5px var(--parthenon),0 0 0 3px rgba(26,154,250,.22)}
+.theme-group.is-invalid{box-shadow:0 0 0 2px #d1434f}
+.theme-fallback{margin:11px 0 0;color:var(--muted);font-size:11px;font-weight:500;line-height:1.8}
+
+/* --- 自由記述 800字 --- */
+.application-form textarea[name="detail"]{min-height:215px}
+.application-form textarea::placeholder{color:#9aa8ba;line-height:1.95}
+.field-hint{margin:-9px 0 0;padding:12px 14px;color:#33445c;background:var(--parthenon-soft);font-size:11px;font-weight:500;line-height:1.95}
+
+/* --- 概要タブ末尾の「扱わないこと」 --- */
+.overview-v2 .ov-boundary{margin-top:9svh;margin-bottom:11svh;background:var(--parthenon-soft);box-shadow:0 16px 40px rgba(11,35,70,.09)}
+.overview-v2 .ov-boundary>.ph{color:var(--parthenon)}
+.overview-v2 .ov-boundary strong{color:var(--navy)}
+.overview-v2 .ov-boundary p{color:#33445c}
+
+@media(max-width:860px){
+  .theme-option{padding:12px 13px;gap:10px}
+  .theme-option strong{font-size:13.5px}
+  .theme-option small{font-size:12px}
+  .theme-lead,.theme-fallback,.field-hint{font-size:12px}
+  .form-reassure{font-size:13px}
+  .application-form textarea[name="detail"]{min-height:200px}
+  .overview-v2 .ov-boundary{margin-top:7svh;margin-bottom:80px}
+}
