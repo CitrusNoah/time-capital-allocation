@@ -1244,3 +1244,63 @@ body{--frost:0}
 .visual-clock{background:var(--navy) url("./assets/backgrounds/01_time-capital-clock.png") 55% center/cover no-repeat}
 .visual-compass{background:var(--navy) url("./assets/backgrounds/02_three-measures-compass.png") 52% center/cover no-repeat}
 .visual-door{background:var(--navy) url("./assets/backgrounds/03_after-report-door.png") 52% center/cover no-repeat}
+
+/* ============================================================
+   v3-d（20260817）強調語（青太字）／スクロール誘導の重なり回避
+   ============================================================ */
+/* 三術名・数字の強調。白地でも濃紺カード上でも読める色を出し分け */
+.num{color:var(--parthenon-text);font-weight:800;font-style:normal}
+.overview-v2 .num,.svc-card .num,.svc-points .num{color:var(--parthenon-text)}
+.measures-rows strong.num{color:var(--parthenon-text)}
+/* 濃紺・写真の上に載る箇所は明るい青で */
+.difference-list .num,.option-values .num,.reviews-section .num,
+.report-tbd .num,.visual-hero .num,.tone-dark .num,
+.overview-v2 .hero-lead .num{color:var(--parthenon-bright)}
+.overview-v2 .hero-lead .num{color:var(--parthenon-text)}
+
+/* スクロール誘導が直上のカードと重ならないよう、下端に余白を確保 */
+.story-section-cue{bottom:0}
+.overview-v2 .svc-detail{padding-bottom:190px}
+.overview-v2 .difference-section{padding-bottom:170px}
+@media(max-width:860px){
+  .story-scroll-cue{bottom:14px}
+  .story-section-cue{bottom:0}
+  .overview-v2 .svc-detail{padding-bottom:150px}
+  .overview-v2 .difference-section{padding-bottom:140px}
+}
+/* 強調語は文脈に関わらず同じ見え方に揃える */
+.num,b.num,strong.num{color:var(--parthenon-text)!important;font-weight:800!important}
+.difference-list .num,.option-values .num,.reviews-section .num,
+.report-tbd .num,.visual-hero .num,.tone-dark .num{color:var(--parthenon-bright)!important}
+
+/* ============================================================
+   v3-e（20260818）SERVICE 01の金額カード／サービス名併記
+                   スクロール誘導と区切り罫線の分離
+   ============================================================ */
+/* SERVICE 01 の金額カード（SERVICE 02 と同じ質感に揃える） */
+.svc-detail-price{
+  display:grid;justify-items:start;gap:4px;
+  width:min(100%,440px);margin:34px 0 0;padding:20px 24px;
+  background:var(--surface);box-shadow:0 14px 34px rgba(11,35,70,.12)}
+.svc-detail-price-name{color:var(--parthenon-text);font-size:11px;font-weight:900;letter-spacing:.1em}
+.svc-detail-price-label{color:var(--muted);font-size:10px;font-weight:800}
+.svc-detail-price strong{color:var(--navy);font-family:var(--serif);font-size:34px;font-weight:500;line-height:1.1}
+.svc-detail-price em{font-size:13px;font-style:normal}
+.svc-detail-price small{color:var(--muted);font-size:10.5px}
+
+/* SERVICE 02 の金額カードにもサービス名を出す */
+.option-price{display:grid;justify-items:start;gap:4px}
+.option-price-name{color:var(--parthenon-text);font-size:11px;font-weight:900;letter-spacing:.1em}
+
+/* スクロール誘導が区切り罫線に触れないよう、線から離して置く */
+.story-section-cue{bottom:74px}
+.overview-v2 .svc-detail{padding-bottom:236px}
+.overview-v2 .difference-section{padding-bottom:216px}
+
+@media(max-width:860px){
+  .svc-detail-price{width:100%;margin-top:28px;padding:18px 20px}
+  .svc-detail-price strong{font-size:30px}
+  .story-section-cue{bottom:58px}
+  .overview-v2 .svc-detail{padding-bottom:186px}
+  .overview-v2 .difference-section{padding-bottom:176px}
+}
