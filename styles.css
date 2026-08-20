@@ -1354,3 +1354,267 @@ body{--frost:0}
   .application-form textarea[name="detail"]{min-height:200px}
   .overview-v2 .ov-boundary{margin-top:7svh;margin-bottom:80px}
 }
+
+
+/* ============================================================
+   v4（20260820）事例タブ：2ケース構成
+   ・CASE A / B の切替と視覚的な区切り
+   ・オブジェクトは枠線ではなく影で浮かせる（他タブと同じ作法）
+   ・マトリクスは横罫線のみ
+   ============================================================ */
+
+:root{--case-shadow:0 14px 34px rgba(11,35,70,.10);--case-shadow-lg:0 22px 54px rgba(11,35,70,.15)}
+
+/* --- ケース切替 --- */
+.case-switch{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:34px 0 18px}
+.case-switch-btn{display:grid;gap:7px;padding:22px 24px;border:0;border-radius:3px;
+  background:var(--surface);box-shadow:var(--case-shadow);text-align:left;cursor:pointer;
+  transition:transform .18s,box-shadow .18s,background .18s}
+.case-switch-btn:hover{transform:translateY(-2px);box-shadow:var(--case-shadow-lg)}
+.case-switch-tag{justify-self:start;padding:4px 11px;border-radius:2px;color:var(--navy);
+  background:rgba(11,35,70,.09);font-size:9px;font-weight:900;letter-spacing:.16em}
+.case-switch-btn strong{color:var(--navy);font-family:var(--serif);font-size:16px;font-weight:600;line-height:1.6}
+.case-switch-btn small{color:var(--muted);font-size:11px;line-height:1.7}
+.case-switch-btn small b{color:var(--parthenon-text);font-weight:800}
+.case-switch-btn.is-active{background:var(--navy);box-shadow:0 20px 46px rgba(11,35,70,.30)}
+.case-switch-btn.is-active .case-switch-tag{color:var(--navy);background:var(--parthenon-bright)}
+.case-switch-btn.is-active strong{color:#fff}
+.case-switch-btn.is-active small{color:rgba(255,255,255,.72)}
+.case-switch-btn.is-active small b{color:var(--parthenon-bright)}
+.case-switch-btn:focus-visible{outline:2px solid var(--parthenon);outline-offset:3px}
+.case-common-note{margin:0 0 12px;color:var(--muted);font-size:10.5px;line-height:1.95}
+.case-common-note strong{color:var(--navy)}
+
+/* --- ケース見出し帯（切替が一目で分かる区切り） --- */
+.case-banner{display:grid;gap:8px;margin:26px 0 0;padding:30px 34px;border-radius:3px;
+  color:#fff;background:var(--navy);box-shadow:0 22px 54px rgba(11,35,70,.28)}
+.case-banner.case-banner-b{background:#123a63}
+.case-banner-tag{justify-self:start;padding:5px 13px;border-radius:2px;color:var(--navy);
+  background:var(--parthenon-bright);font-size:10px;font-weight:900;letter-spacing:.2em}
+.case-banner strong{color:#fff;font-family:var(--serif);font-size:19px;font-weight:600;line-height:1.6}
+.case-banner small{color:rgba(255,255,255,.66);font-size:11px;letter-spacing:.02em}
+.case-body{animation:caseIn .28s ease}
+@keyframes caseIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.case-body>.case-profile{padding-top:52px}
+
+/* --- 既存オブジェクトへ影を付与（枠線ではなく浮かせる） --- */
+.case-profile>div,.case-pulse>div,.who-grid>div,.lens-implication{border-radius:3px;box-shadow:var(--case-shadow)}
+.case-pulse,.who-grid{background:transparent;gap:12px}
+.case-emotion,.ticket-example{border-radius:3px;box-shadow:var(--case-shadow)}
+.lens-synthesis{border-radius:3px;box-shadow:0 22px 54px rgba(11,35,70,.26)}
+.after-changes article{padding:26px;border-radius:3px;background:var(--surface);box-shadow:var(--case-shadow)}
+.after-changes article>.ph{color:var(--parthenon)}
+.case-result-note{border-radius:3px;box-shadow:var(--case-shadow)}
+.case-emotion>.ph{color:var(--parthenon)}
+.case-emotion p span{color:var(--navy);font-family:var(--serif);font-size:14px;font-weight:600;line-height:1.85}
+
+/* --- 小見出し --- */
+.case-subhead{margin:38px 0 14px;padding-bottom:9px;border-bottom:1px solid var(--line);
+  color:var(--navy);font-size:11px;font-weight:900;letter-spacing:.14em}
+.case-narrative>.case-subhead:first-child{margin-top:0}
+
+/* --- 申込フォーム記入例 --- */
+.case-apply{display:grid;gap:15px;padding:26px 28px;border-radius:3px;background:var(--surface);box-shadow:var(--case-shadow)}
+.case-apply-head{display:flex;align-items:center;gap:10px;color:var(--navy);font-size:11px;font-weight:900;letter-spacing:.1em}
+.case-apply-head>.ph{color:var(--parthenon);font-size:20px}
+.case-apply-themes p{display:flex;flex-wrap:wrap;gap:7px;margin:6px 0 0}
+.case-apply-themes b{padding:5px 12px;border-radius:2px;color:var(--parthenon-text);
+  background:var(--parthenon-soft);font-size:11px;font-weight:800}
+.case-apply small{color:var(--faint);font-size:9px;font-weight:900;letter-spacing:.1em}
+.case-apply-detail p{margin:7px 0 0;padding:16px 18px;border-radius:3px;background:#fff;
+  color:#33445c;font-size:12.5px;line-height:2.05}
+.case-apply-detail p strong{color:var(--navy)}
+
+/* --- メール往復 --- */
+.mail-thread{display:grid;gap:12px;margin:4px 0 0}
+.mail-round{display:grid;grid-template-columns:118px 1fr;gap:20px;padding:22px 24px;border-radius:3px;
+  background:#fff;box-shadow:var(--case-shadow)}
+.mail-round.mail-noah{background:var(--parthenon-soft)}
+.mail-from{display:grid;gap:4px;align-content:start}
+.mail-from span{color:var(--faint);font-size:8.5px;font-weight:900;letter-spacing:.13em}
+.mail-from strong{color:var(--navy);font-size:12px;font-weight:900}
+.mail-noah .mail-from strong{color:var(--parthenon-text)}
+.mail-body>p{margin:0 0 11px;color:#3a4a61;font-size:12.5px;line-height:2.05}
+.mail-body>p:last-child{margin-bottom:0}
+.mail-body strong{color:var(--navy);font-weight:800}
+.mail-body ul{margin:0 0 11px;padding-left:19px;display:grid;gap:6px}
+.mail-body li{color:#3a4a61;font-size:12.5px;line-height:1.95}
+.mail-body li strong{color:var(--navy)}
+.mail-voice{margin:12px 0 0!important;padding:13px 16px;border-radius:3px;background:#fff;
+  color:var(--navy)!important;font-family:var(--serif);font-size:13.5px!important;font-weight:600;line-height:1.85!important;
+  box-shadow:var(--case-shadow)}
+.mail-noah .mail-voice{background:#fff}
+.mail-key{margin:12px 0!important;padding:15px 18px;border-radius:3px;color:#fff!important;background:var(--navy);
+  font-family:var(--serif);font-size:14px!important;font-weight:600;line-height:1.8!important;
+  box-shadow:0 16px 38px rgba(11,35,70,.24)}
+.mail-split{display:grid;gap:9px;margin:4px 0 12px}
+.mail-split>div{display:grid;grid-template-columns:96px 1fr;gap:16px;padding:14px 16px;border-radius:3px;
+  background:#fff;box-shadow:var(--case-shadow)}
+.mail-split span{color:var(--parthenon-text);font-size:10px;font-weight:900;letter-spacing:.06em}
+.mail-split p{margin:0;color:#3a4a61;font-size:12px;line-height:1.95}
+.mail-split p b{color:var(--navy);font-weight:800}
+
+/* --- SCOPE LOCK --- */
+.case-scope{display:grid;gap:13px;margin:6px 0 0;padding:20px 22px;border-radius:3px;
+  color:#fff;background:var(--navy);box-shadow:0 20px 46px rgba(11,35,70,.26)}
+.case-scope-head{display:flex;align-items:center;gap:9px;color:var(--parthenon-bright);font-size:10px;font-weight:900;letter-spacing:.16em}
+.case-scope-head>.ph{font-size:18px}
+.case-scope-rows{display:grid;gap:1px;background:rgba(255,255,255,.14)}
+.case-scope-rows>div{display:grid;grid-template-columns:78px 1fr;gap:16px;padding:13px 0;background:var(--navy)}
+.case-scope-rows span{color:var(--parthenon-bright);font-size:10px;font-weight:900}
+.case-scope-rows p{margin:0;color:rgba(255,255,255,.82);font-size:11.5px;line-height:1.9}
+
+/* --- 三術マトリクス（横罫線のみ） --- */
+.lens-matrix{display:grid;margin:6px 0 0}
+.lens-matrix-head,.lens-matrix-row{display:grid;grid-template-columns:150px 1.15fr 1.15fr 1fr;gap:26px}
+.lens-matrix-head{padding:0 0 10px;border-bottom:2px solid var(--navy)}
+.lens-matrix-head span{color:var(--navy);font-size:9.5px;font-weight:900;letter-spacing:.1em}
+.lens-matrix-row{align-items:start;padding:24px 0;border-bottom:1px solid var(--line)}
+.lens-matrix-row>div>small{display:none}
+.lens-matrix-name{display:grid;gap:8px;align-content:start}
+.lens-matrix-name>.ph{color:var(--parthenon);font-size:27px}
+.lens-matrix-name strong{color:var(--navy);font-family:var(--serif);font-size:16px;font-weight:600}
+.lens-matrix-row p{margin:0;color:var(--muted);font-size:11.5px;line-height:1.95}
+.lens-matrix-row p b{color:var(--navy);font-weight:800}
+.lens-matrix-hypo p{padding:14px 16px;border-radius:3px;background:var(--parthenon-soft);color:#33445c}
+.lens-matrix-hypo p b{color:var(--parthenon-text)}
+
+/* --- 反証条件 --- */
+.case-falsify{display:grid;gap:11px;margin:22px 0 0;padding:24px 26px;border-radius:3px;
+  background:var(--surface);box-shadow:var(--case-shadow)}
+.case-falsify-head{display:flex;align-items:center;gap:10px}
+.case-falsify-head>.ph{color:var(--parthenon);font-size:21px}
+.case-falsify-head strong{display:grid;gap:2px;color:var(--navy);font-size:11px;font-weight:900;letter-spacing:.1em}
+.case-falsify-head small{color:var(--muted);font-size:9.5px;font-weight:600;letter-spacing:0}
+.case-falsify>p{margin:0;color:var(--muted);font-size:12px;line-height:2}
+.case-falsify>p strong{color:var(--navy)}
+.case-falsify-note{padding:12px 15px;border-radius:3px;background:var(--navy);
+  color:#fff!important;font-size:11.5px!important;font-weight:700}
+
+/* --- レスポンシブ --- */
+@media(max-width:1080px){
+  .lens-matrix-head{display:none}
+  .lens-matrix-row{grid-template-columns:1fr;gap:14px;padding:26px 0}
+  .lens-matrix-row>div>small{display:block;margin-bottom:5px;color:var(--faint);font-size:9px;font-weight:900;letter-spacing:.1em}
+  .lens-matrix-name{grid-template-columns:30px 1fr;align-items:center;gap:11px}
+}
+@media(max-width:860px){
+  .case-switch{grid-template-columns:1fr;gap:10px;margin:26px 0 16px}
+  .case-switch-btn{padding:18px 20px}
+  .case-switch-btn strong{font-size:15px}
+  .case-switch-btn small,.case-common-note{font-size:12px}
+  .case-banner{padding:24px 22px;margin-top:20px}
+  .case-banner strong{font-size:16.5px}
+  .case-banner small{font-size:11.5px}
+  .mail-round{grid-template-columns:1fr;gap:11px;padding:20px}
+  .mail-from{grid-template-columns:auto auto;justify-content:start;align-items:center;gap:10px}
+  .mail-body>p,.mail-body li{font-size:13px}
+  .mail-split>div,.case-scope-rows>div{grid-template-columns:1fr;gap:6px}
+  .case-apply-detail p{font-size:13px}
+  .case-falsify>p,.lens-matrix-row p{font-size:12.5px}
+  .after-changes article{padding:22px}
+}
+
+
+/* ============================================================
+   v4-b（20260820）事例タブ：選択中をParthenonブルーへ／クリック可能の明示
+   濃紺の塗りつぶしはすべてParthenon系へ置換。
+   白文字のコントラストは
+     #0d6fbf → 5.19:1、#0a5794 → 7.49:1（いずれもWCAG AA 4.5:1を満たす）
+   ※原色 #1a9afa は白文字で 2.98:1 と不足するため、面には使わず差し色に限定する。
+   ============================================================ */
+
+:root{--case-blue:#0d6fbf;--case-blue-deep:#0a5794}
+
+/* --- 切替ボタン：クリックできることを明示する --- */
+.case-switch-btn{position:relative;padding:22px 24px 46px;overflow:hidden}
+.case-switch-btn::before{position:absolute;top:0;bottom:0;left:0;width:4px;content:"";
+  background:rgba(11,35,70,.14);transition:background .18s}
+.case-switch-btn::after{position:absolute;bottom:17px;left:24px;content:"クリックして表示 →";
+  color:var(--case-blue);font-size:10.5px;font-weight:900;letter-spacing:.08em}
+.case-switch-btn:hover::before{background:var(--parthenon)}
+.case-switch-btn:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(26,154,250,.26)}
+
+.case-switch-btn.is-active{background:var(--case-blue);box-shadow:0 20px 46px rgba(13,111,191,.32)}
+.case-switch-btn.is-active::before{background:var(--parthenon-bright)}
+.case-switch-btn.is-active::after{content:"● 表示中";color:#fff}
+.case-switch-btn.is-active .case-switch-tag{color:var(--case-blue);background:#fff}
+.case-switch-btn.is-active strong{color:#fff}
+.case-switch-btn.is-active small{color:rgba(255,255,255,.82)}
+.case-switch-btn.is-active small b{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.case-switch-btn.is-active:hover{transform:none;box-shadow:0 20px 46px rgba(13,111,191,.32)}
+
+/* --- 濃紺の面をParthenonブルーへ --- */
+.case-banner,.case-banner.case-banner-b{background:var(--case-blue);box-shadow:0 22px 54px rgba(13,111,191,.30)}
+.case-banner-tag{color:var(--case-blue);background:#fff}
+.case-banner small{color:rgba(255,255,255,.80)}
+
+.case-scope{background:var(--case-blue-deep);box-shadow:0 20px 46px rgba(10,87,148,.30)}
+.case-scope-head{color:#cfe8ff}
+.case-scope-rows{background:rgba(255,255,255,.20)}
+.case-scope-rows>div{background:var(--case-blue-deep)}
+.case-scope-rows span{color:#cfe8ff}
+.case-scope-rows p{color:rgba(255,255,255,.90)}
+
+.case-panel .lens-synthesis{background:var(--case-blue-deep);box-shadow:0 22px 54px rgba(10,87,148,.28)}
+.case-panel .lens-synthesis>.ph{color:#cfe8ff}
+.case-panel .lens-synthesis strong{color:#cfe8ff}
+.case-panel .lens-synthesis span{color:rgba(255,255,255,.88)}
+.case-panel .lens-synthesis span b{color:#fff}
+
+.mail-key{background:var(--case-blue);box-shadow:0 16px 38px rgba(13,111,191,.28)}
+.case-falsify-note{background:var(--case-blue)}
+
+@media(max-width:860px){
+  .case-switch-btn{padding:18px 20px 42px}
+  .case-switch-btn::after{left:20px;bottom:15px;font-size:11px}
+  .case-switch-btn:hover{transform:none}
+}
+
+
+/* ============================================================
+   v4-c（20260820）
+   ・SCOPE LOCK／暫定所見の見出しを白字へ
+   ・「このサービスが約束する変化」は塗りつぶしを外し、余白と文字色を整理
+   ============================================================ */
+
+/* --- 見出しを白字に、本文もコントラストを上げる --- */
+.case-scope-head{color:#fff}
+.case-scope-rows p{color:rgba(255,255,255,.94)}
+.case-panel .lens-synthesis p strong{color:#fff}  /* 既存 .tab-panel:not(.overview-panel) p strong（0,2,2）と同詳細度にして後勝ちさせる */
+.case-panel .lens-synthesis span{color:rgba(255,255,255,.92)}
+
+/* --- 約束する変化：塗りつぶしを外して罫線＋余白で見せる --- */
+.case-result-note{display:grid;grid-template-columns:38px 1fr;align-items:start;gap:20px;
+  margin-top:18px;padding:30px 0 34px;border-top:1px solid var(--line);border-radius:0;
+  color:inherit;background:transparent;box-shadow:none}
+.case-result-note>.ph{color:var(--parthenon);font-size:28px;line-height:1.1}
+.case-result-note strong{display:block;color:var(--navy);font-size:11px;font-weight:900;letter-spacing:.1em}
+.case-result-note p{margin:9px 0 0;color:var(--muted);font-size:12.5px;line-height:2.05}
+.case-result-note p b{color:var(--navy);font-weight:800}
+
+@media(max-width:860px){
+  .case-result-note{grid-template-columns:28px 1fr;gap:14px;padding:26px 0 30px}
+  .case-result-note>.ph{font-size:23px}
+  .case-result-note p{font-size:13px}
+}
+
+
+/* ============================================================
+   v4-d（20260820）濃い面の上の文字色を確実に白へ
+   SCOPE LOCK は Noah のメール本文（.mail-body）の中に置かれるため、
+   .mail-body strong{color:var(--navy)} と .ph{color:var(--navy)} に
+   上書きされていた。詳細度を上げて打ち消す。
+   ============================================================ */
+
+.case-scope .case-scope-head{color:#fff}
+.case-scope .case-scope-head strong{color:#fff}
+.case-scope .case-scope-head>.ph{color:#fff}
+.case-scope .case-scope-rows span{color:#cfe8ff}
+.case-scope .case-scope-rows p{color:rgba(255,255,255,.94)}
+.case-scope .case-scope-rows p strong,.case-scope .case-scope-rows p b{color:#fff}
+
+.case-panel .lens-synthesis>.ph{color:#fff}
+.case-panel .lens-synthesis p strong{color:#fff}
+.case-panel .lens-synthesis p span{color:rgba(255,255,255,.92)}
+.case-panel .lens-synthesis p span b{color:#fff}
