@@ -10,8 +10,7 @@
   <meta name="description" content="一つの相談テーマを最初の3ラリーで最大5問へ仕立て、三術鑑定エンジンを駆動。主な結論・根拠・行動示唆を収めたファーストレポートを届け、読後3ラリーの更問を反映したファイナルレポートへ更新するサービス。">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css">
-  <link rel="stylesheet" href="./styles.css?v=v4d">
-  <link rel="stylesheet" href="./v5.css?v=v5-implementation19">
+  <link rel="stylesheet" href="./styles.css?v=v5-consolidated1">
 </head>
 <body class="v2-site">
 <a class="skip-link" href="#content">本文へ移動</a>
@@ -629,12 +628,12 @@
         <button class="primary-button full submit-button" type="submit">申込希望を送信する <i class="ph ph-arrow-right"></i></button>
       </form>
     </div>
-    <div class="submitted-view" id="application-success" hidden>
+    <div class="submitted-view" id="application-success" role="status" aria-live="polite" hidden>
       <div class="submitted-mark">SENT</div>
-      <h2>申込希望を<br>送信しました。</h2>
+      <h2 id="application-success-title" tabindex="-1">申込希望を<br>送信しました。</h2>
       <p>申込ID <strong id="application-id"></strong></p>
       <p>受付確認メールをご確認ください。鑑定士が内容と受付枠を確認し、原則3営業日以内に、受付可否と今後の進め方をご案内します。対応可能で先へ進む場合だけ、案内された正式な方法でお支払いください。着金確認後、申込時の内容に対する鑑定士の最初の実質コメントをラリー1として、問い設計を始めます。</p>
-      <div class="next-steps"><span>01 内容・受付枠</span><span>02 受付可否・進め方</span><span>03 支払い・着金確認</span><span>04 ラリー1開始</span></div>
+      <div class="next-steps" role="list" aria-label="申込送信後の流れ"><span role="listitem"><b>01</b><small>受付可否・進め方</small></span><span role="listitem"><b>02</b><small>支払い・着金確認</small></span><span role="listitem"><b>03</b><small>問い設計（ラリー1開始）</small></span></div>
       <button class="primary-button" type="button" data-close>サイトへ戻る</button>
     </div>
   </div>
@@ -809,9 +808,10 @@
 
   const applicationDialog=document.querySelector('#application-dialog');
   const legalDialog=document.querySelector('#legal-dialog');
+  const applicationDialogPanel=applicationDialog.querySelector('.dialog');
   function openDialog(dialog){dialog.hidden=false;document.body.classList.add('dialog-open');dialog.querySelector('.dialog').focus();}
   function closeDialogs(){applicationDialog.hidden=true;legalDialog.hidden=true;document.body.classList.remove('dialog-open');}
-  document.querySelectorAll('[data-apply]').forEach(button=>button.addEventListener('click',()=>{document.querySelector('#application-form-view').hidden=false;document.querySelector('#application-success').hidden=true;document.querySelector('#form-error').hidden=true;openDialog(applicationDialog);}));
+  document.querySelectorAll('[data-apply]').forEach(button=>button.addEventListener('click',()=>{applicationDialogPanel.setAttribute('aria-labelledby','application-title');document.querySelector('#application-form-view').hidden=false;document.querySelector('#application-success').hidden=true;document.querySelector('#form-error').hidden=true;openDialog(applicationDialog);}));
   document.querySelectorAll('[data-close]').forEach(button=>button.addEventListener('click',closeDialogs));
   [applicationDialog,legalDialog].forEach(dialog=>dialog.addEventListener('click',event=>{if(event.target===dialog)closeDialogs();}));
   addEventListener('keydown',event=>{if(event.key==='Escape')closeDialogs();});
@@ -856,7 +856,7 @@
     submit.disabled=true;submit.textContent='送信しています…';
     /* GASのウェブアプリはCORSヘッダを返さないため、no-corsで送信する。
        レスポンスは読めない（opaque）ため、ここでは送信リクエストの完了までしか確認できない。 */
-    try{await fetch(endpoint,{method:'POST',mode:'no-cors',body:new URLSearchParams(new FormData(form))});document.querySelector('#application-id').textContent=id;document.querySelector('#application-form-view').hidden=true;document.querySelector('#application-success').hidden=false;form.reset();syncBirthTimeInput();document.querySelectorAll('.char-count b').forEach(counter=>counter.textContent='0');document.querySelector('#theme-group').classList.remove('is-invalid');form.querySelectorAll('.theme-option').forEach(opt=>opt.classList.remove('is-checked'));}
+    try{await fetch(endpoint,{method:'POST',mode:'no-cors',body:new URLSearchParams(new FormData(form))});document.querySelector('#application-id').textContent=id;document.querySelector('#application-form-view').hidden=true;document.querySelector('#application-success').hidden=false;applicationDialogPanel.setAttribute('aria-labelledby','application-success-title');document.querySelector('#application-success-title').focus();form.reset();syncBirthTimeInput();document.querySelectorAll('.char-count b').forEach(counter=>counter.textContent='0');document.querySelector('#theme-group').classList.remove('is-invalid');form.querySelectorAll('.theme-option').forEach(opt=>opt.classList.remove('is-checked'));}
     catch{error.textContent='送信できませんでした。通信環境を確認して、もう一度お試しください。';error.hidden=false;}
     finally{submit.disabled=false;submit.innerHTML='申込希望を送信する <i class="ph ph-arrow-right"></i>';}
   });
